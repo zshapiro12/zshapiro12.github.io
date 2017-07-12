@@ -1,39 +1,44 @@
+  /* Styles for my resume*/
 body {
-  font-style: 12px;
+  font-size: 12px;
   font-family: 'Open Sans', Arial, sans-serif;
   color: #444;
 }
 
 h1,h2,h3,h4,h5,ul,li {
     font-weight: 300;
-
-
-    /* Styles at the top of resume*/
 }
+/* Set name font-size to 48px, aligned to center*/
 h1 {
   font-size: 4em;
   text-align:center;
 }
-
+/* Set experience font-size to 24px, changed background color to gray*/
 h2 {
   font-size: 2em;
   background-color:#d1d1d1;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
 }
 
+/* Bolded job title, set weight to 600*/
 h3 {
-  font-weight: bold;
+  font-size: 1.5em;
   font-weight: 600;
 }
+
+/* Set company name to 16px*/
 h4 {
    font-size: 1.33em;
 }
 
+/* Italicized dates, set font to 12px*/
 h5 {
   font-style:italic;
-  font-size: 12px;
+  font-size: 1em;
 }
-
-ul {
+/* Set contact info, skills and education to 10X 12px*/
+ul, li {
   font-size: 1.10em;
 }
 
