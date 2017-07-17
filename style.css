@@ -1,20 +1,76 @@
   /* Styles for my resume*/
+  /* Styles for my resume*/
+
 body {
   font-size: 12px;
   font-family: 'Open Sans', Arial, sans-serif;
   color: #444;
 }
 
-.header1 {
-    width: 300px;
-    height: 50px;
-    border: 1px solid blue;
-}
-.Experience2 {
+h1,h2,h3,h4,h5,ul,li {
     font-weight: 300;
 }
 /* Set name font-size to 48px, aligned to center*/
-.JobTitle3 {
+h1 {
+  font-size: 4em;
+  text-align:center;
+}
+/* Set experience font-size to 24px, changed background color to gray*/
+h2 {
+  font-size: 2em;
+  background-color:#d1d1d1;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Bolded job title, set weight to 600*/
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/* Set company name to 16px*/
+h4 {
+   font-size: 1.33em;
+}
+
+/* Italicized dates, set font to 12px*/
+h5 {
+  font-style:italic;
+  font-size: 1em;
+}
+/* Set contact info, skills and education to 10X 12px*/
+ul, li {
+  font-size: 1.10em;
+}
+
+
+
+
+body
+
+.name1{
+    width: 300px;
+    height: 50px;
+    border: 1px solid blue;
+    border-bottom: 1px #FDB020;
+    margin: 5px auto 5px auto;
+    width: 60%;
+    min-width: 300px;
+
+
+}
+.sectionheader2{
+    font-weight: 300;
+    margin: 0 0 10 0;
+    text-align: center;
+    width: 30%;
+    min-width: 150px;
+    border-bottom: 1px solid #FDB020;
+
+}
+/* Set name font-size to 48px, aligned to center*/
+.jobtitle3{
   font-size: 4em;
   text-align:center;
 }
@@ -53,6 +109,7 @@ ul, li {
   font-weight: 300;
 
 }
+
 
 
 
