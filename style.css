@@ -20,24 +20,25 @@ div {
 #name {
     font-size: 4em;
     width: 300px;
-    height: 50px;
     border-bottom: 1px solid #FDB020;
     margin: 5px auto 5px auto;
     width: 60%;
     min-width: 300px;
+    text-align: center;
 }
 /* Aligned sectionheader to center of resume, changed boldness*/
 .sectionheader {
     font-weight: 300;
-    margin: 0 0 10px 0;
+    margin: 7px 0 10px 0;
     text-align: center;
     width: 30%;
     min-width: 150px;
-    border-bottom: 1px solid #FDB020;
+    border-bottom: 1px solid rgba(253, 176, 32, 0.4);
     font-size: 2em;
     background-color:#d1d1d1;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
+    float: left;
 
 }
 
@@ -70,14 +71,18 @@ ul.menu {
 }
 
 /* Set margins of IDs to 5px on top*/
-ul#degrees {
-    margin: 5px 0 0 0;
+ul#degrees, ul#do {
+    margin: 0px 0px 0px 4%;
+    width: 65%;
+    float: left;
+    list-style:none;
+/* The code widdened the left and right margins*/
+    -webkit-padding-start: 21px;
+    border-left: 1px solid rgba(253, 176, 32, 0.3);
 }
 
-ul#do {
-    margin: 5px 0 0 0;
 
-}
+
 /* Set box-sizing and font-weight for all*/
 * div {
     box-sizing: border-box;
@@ -99,45 +104,49 @@ div.job {
 }
 
 div.alljobs {
+  width: 65%;
+  float: left;
+  margin-left: 4%;
+  border-left: 1px solid rgba(253, 176, 32, 0.3);
+  padding: 0 0 0 20px;
+}
+/*Combined all three IDs, adjusted margin, border, etc.*/
+div#experience, div#education, div#skills {
+  margin: 0px auto 20px auto;
+  padding: 10px 10px;
+  width: 90%;
+  height: auto;
+  overflow: auto;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 }
-/*Added multiple Div IDs and changed margins on botton*/
-div#experience {
-  margin: 0 0 20px 0;
-}
-
-div#education {
-  margin: 0 0 20px 0;
-}
-
-div#skills {
-  margin: 0 0 20px 0;
-}
-
+/* Set header of resume to fixed position*/
 div#top {
   margin: 0 0 35px 0;
   padding: 0 0 10px 0;
   position: fixed;
-  background-color: white;
+  background-color: #fff;
   width: 100%;
   z-index: 1;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
-}
+  text-decoration: none;
 
+}
+/* Adjusted position, top, width, height and overflow to botton*/
 div#bottom {
-  margin: center;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0px auto;
   position: relative;
   top: 120px;
   width: 95%;
   height: auto;
   overflow: auto;
-
-
-
 }
 
-
-
+li a {
+  text-decoration: none;
+  color: #444;
+}
+#degrees li, #do li {
+  margin: 3px;
 }
