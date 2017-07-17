@@ -150,3 +150,34 @@ li a {
 #degrees li, #do li {
   margin: 3px;
 }
+/* Media query for extra small device*/
+@media only screen and (max-width: 767px){
+    #top {
+     position: relative;
+     border-bottom: 0px;}
+    #name {
+     font-size: 3em; }
+    .alljobs {
+      width: 100%;
+      float: left;
+      margin: 0 0;
+      border-left: none
+      padding: 10px 10px;
+    }
+  }
+}
+/* Media query for small device*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+/* Media query for medium device*/
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+}
+/* Media query for large device*/
+@media only screen and (min-width: 1200px){
+
+}
+span.bolding {
+  font-weight: 600;
+}
