@@ -159,23 +159,66 @@ li a {
      font-size: 3em; }
     .alljobs {
       width: 100%;
-      float: left;
+      float: none;
       margin: 0 0;
       border-left: none
-      padding: 10px 10px;
+      padding: 10px 10px; }
+    .sectionheader {
+      margin: 10px auto 15px auto;
+      padding: 5px 10px;
+      width: 97%;
+      min-width: 0;
+      text-align: center;
+      float: none;}
+    #degrees, #do {
+      margin: 15px 2% 0px 2%;
+      padding: 0 20px;
+      width: 100px;
+      float: none;
+      -webkit-padding-start: 0px;
+      border-left: none;}
     }
-  }
 }
 /* Media query for small device*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
+    #name {
+      font-size: 3.6em;
+    }
 }
 /* Media query for medium device*/
 @media only screen and (min-width: 992px) and (max-width: 1199px){
-
+   #name {
+     font-size: 3.9em;
+   }
 }
 /* Media query for large device*/
 @media only screen and (min-width: 1200px){
+  #experience {
+    width: 60%;
+    float: right;}
+  #education, #skills {
+    width: 38.5%;
+    float: left;
+    overflow-x: hidden;}
+  #degrees, #do {
+    margin: 15px 2% 0 2%;
+    width: 100%;
+    float: none;
+    -webkit-padding-start: 0px;
+    border-left: none;}
+  .sectionheader {
+    margin: 7px auto 15px auto;
+    padding: 5px 10px;
+    width: 97%;
+    min-width: 0px;
+    float: none;}
+  .alljobs {
+    width: 100%;
+    float: none;
+    margin: 0px;
+    border-left: none;
+    padding: 0px 10px 10px 10px;
+  }
 
 }
 span.bolding {
