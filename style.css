@@ -1,55 +1,15 @@
-  /* Styles for my resume*/
-  /* Styles for my resume*/
-
-body {
-  font-size: 12px;
-  font-family: 'Open Sans', Arial, sans-serif;
-  color: #444;
-}
-
-h1,h2,h3,h4,h5,ul,li {
-    font-weight: 300;
-}
-/* Set name font-size to 48px, aligned to center*/
-h1 {
-  font-size: 4em;
-  text-align:center;
-}
-/* Set experience font-size to 24px, changed background color to gray*/
-h2 {
-  font-size: 2em;
-  background-color:#d1d1d1;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 1);
-}
-
-/* Bolded job title, set weight to 600*/
-h3 {
-  font-size: 1.5em;
-  font-weight: 600;
-}
-
-/* Set company name to 16px*/
-h4 {
-   font-size: 1.33em;
-}
-
-/* Italicized dates, set font to 12px*/
-h5 {
-  font-style:italic;
-  font-size: 1em;
-}
-/* Set contact info, skills and education to 10X 12px*/
-ul, li {
-  font-size: 1.10em;
-}
-
-
-
 
 body
 
-.name1{
+* {
+  box-sizing: border-box;
+}
+
+.div {
+  font-weight: 300;
+}
+/* Set border-bottom to 1px and changed color*/
+#name {
     width: 300px;
     height: 50px;
     border: 1px solid blue;
@@ -60,7 +20,8 @@ body
 
 
 }
-.sectionheader2{
+/* Aligned sectionheader to center of resume, changed boldness*/
+.sectionheader {
     font-weight: 300;
     margin: 0 0 10 0;
     text-align: center;
@@ -68,46 +29,69 @@ body
     min-width: 150px;
     border-bottom: 1px solid #FDB020;
 
+    font-size: 2em;
+    background-color:#d1d1d1;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+
 }
 /* Set name font-size to 48px, aligned to center*/
-.jobtitle3{
-  font-size: 4em;
-  text-align:center;
-}
-/* Set experience font-size to 24px, changed background color to gray*/
-h2 {
-  font-size: 2em;
-  background-color:#d1d1d1;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 1);
+.jobtitle {
+    font-size: 4em;
+    text-align:center;
 }
 
 /* Bolded job title, set weight to 600*/
-h3 {
-  font-size: 1.5em;
-  font-weight: 600;
+.jobtitle {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
 /* Set company name to 16px*/
-h4 {
-   font-size: 1.33em;
+.organization {
+    font-size: 1.33em;
 }
 
-/* Italicized dates, set font to 12px*/
-h5 {
-  font-style:italic;
-  font-size: 1em;
+/* Set margin to date at 2 px on top*/
+.date {
+    font-style:italic;
+    font-size: 1em;
+    margin: 2px 0 0 0;
 }
 /* Set contact info, skills and education to 10X 12px*/
 ul, li {
-  font-size: 1.10em;
+   font-size: 1.10em;
+}
+/* Set margin of unordered list to 0, aligned to center*/
+ul.menu {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    text-align: center;
 }
 
+/* Set margins of IDs to 5px on top*/
+ul#degrees {
+    margin: 5px 0 0 0;
+}
+
+ul#do {
+    margin: 5px 0 0 0;
+
+}
 /* Set box-sizing and font-weight for all*/
 * div {
-  box-sizing: border-box;
-  font-weight: 300;
+    box-sizing: border-box;
+    font-weight: 300;
 
+}
+/* Set margin to paragraphs at 10px on top*/
+p.description {
+    margin: 10px 0 0 0;
+}
+
+/* Added display inline to only this list*/
+ul.menu {
+    display: inline;
 }
 
 
@@ -115,8 +99,6 @@ ul, li {
 
 
 
-
-}
 
 
 
