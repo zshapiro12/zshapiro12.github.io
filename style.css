@@ -5,8 +5,9 @@ body
   box-sizing: border-box;
 }
 
-.div {
+div {
   font-weight: 300;
+  font-family: 'Open Sans';
 }
 /* Set border-bottom to 1px and changed color*/
 #name {
@@ -94,17 +95,30 @@ ul.menu {
     display: inline;
 }
 
+div.job {
+  margin: 0 0 15px 0;
+}
 
+/*Added multiple Div IDs and changed margins on botton*/
+div#experience {
+  margin: 0 0 20px 0;
+}
 
+div#education {
+  margin: 0 0 20px 0;
+}
 
+div#skills {
+  margin: 0 0 20px 0;
+}
 
+div#top {
+  margin: 0 0 35px 0;
+}
 
-
-
-
-
-
-
+div#bottom {
+  margin: 0 0 0 10px;
+}
 
 
 
