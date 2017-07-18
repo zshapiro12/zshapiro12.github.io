@@ -166,31 +166,42 @@ span.bolding {
   div#bottom {
     top: 0px;
   }
+
   div#name {
     font-size: 3em;
   }
-    .alljobs {
-      width: 100%;
-      float: none;
-      margin: 0 0;
-      border-left: none
-      padding: 10px 10px;}
-    .sectionheader {
+
+  div.alljobs {
+    width: 100%;
+    float: none;
+    margin: 0 0;
+    border-left: 0px;
+    padding: 10px 10px;
+  }
+
+  div.sectionheader {
       margin: 10px auto 15px auto;
       padding: 5px 10px;
-      width: 97px;
+      width: 97%;
       min-width: 0;
       text-align: center;
-      float: none;}
-    div#degrees, div#do {
+      float: none;
+    }
+
+   ul#degrees, ul#do {
       margin: 15px 2% 0px 2%;
       padding: 0 20px;
-      width: 100px;
+      width: 100%;
       float: none;
       -webkit-padding-start: 0px;
-      border-left: none;}
+      border-left: none;
+    }
+
+    div#education, div#skills, div#experience {
+      overflow-x: hidden;
     }
 }
+
 /* Media query for small device*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   div#name {
@@ -207,30 +218,41 @@ span.bolding {
 
 /* Media query for large device*/
 @media only screen and (min-width: 1200px) {
+
   div#experience {
     width: 60%;
-    float: right;}
-  #education, #skills {
+    float: right;
+    overflow-x: hidden;
+
+  }
+
+  div#education, div#skills {
     width: 38.5%;
     float: left;
-    overflow-x: hidden;}
-  div#degrees, div#do {
+    overflow-x: hidden;
+  }
+
+  ul#degrees, ul#do {
     margin: 15px 2% 0 2%;
     width: 100%;
     float: none;
     -webkit-padding-start: 0px;
-    border-left: none;}
-  .sectionheader {
+    border-left: 0px;
+  }
+
+  div.sectionheader {
     margin: 7px auto 15px auto;
     padding: 5px 10px;
     width: 97%;
     min-width: 0px;
-    float: none;}
-  .alljobs {
+    float: none;
+  }
+
+  div.alljobs {
     width: 100%;
     float: none;
     margin: 0px;
-    border-left: none;
+    border-left: 0px;
     padding: 0px 10px 10px 10px;
   }
 
