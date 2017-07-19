@@ -4,7 +4,6 @@
 body {
   font-sise: 12px;
   padding-top: 50px;
-
   }
 
   * {
@@ -23,17 +22,26 @@ body {
 }
 
 .zachbody{
-  height: 600px;
+  color: #444;
+  background-color: lightgray;
 }
 
-.rowname{
+.name{
   font-size: 2em;
   font-weight: 300;
 }
 
+.bottomsection{
+  padding-bottom: 50px;
+}
+
+.rightsection{
+
+}
+
 .sectionheader{
-  font-size: 1.5em;
-  font-weight: bold
+  font-size: 1.7em;
+  font-weight: bold;
 }
 
 .experience {
@@ -51,15 +59,21 @@ body {
 
 .jobtitle{
   font-weight: bold;
+  font-size: 1.2em;
 
 }
 
 .joborganization{
+  font-size: 1.1em;
 
 }
 
 .jopdescription{
+  font-size: .5em;
+}
 
+.date{
+  font-style: italic;
 }
 
 .education{
@@ -67,7 +81,7 @@ body {
 }
 
 .degree{
-
+  font-style: bold;
 }
 
 .school{
