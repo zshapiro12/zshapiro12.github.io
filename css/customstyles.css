@@ -2,8 +2,19 @@
 /*These initial styles come from here: http://getbootstrap.com/examples/starter-template/starter-template.css*/
 
 body {
+  font-sise: 12px;
   padding-top: 50px;
 
+  }
+
+  * {
+  box-sizing: border-box;
+  }
+
+  div {
+  font-weight: 300;
+  font-family: "Open Sans", "Helvetica", "Georgia";
+  font-weight:300;
 }
 
 .zachbody, .experience, .sectionheader, .jobbox, .job, .jobtitle, .joborganization, .jobdescription {
@@ -15,11 +26,16 @@ body {
   height: 600px;
 }
 
-.sectionheader{
+.rowname{
+  font-size: 2.5em;
+}
 
+.sectionheader{
+  font-size: 1.5em;
 }
 
 .experience {
+
 
 }
 
@@ -59,10 +75,22 @@ body {
 
 }
 
-.technical{
+.technicalskillsbox{
 
 }
 
-.communication{
+.keyskillsbox{
+
+}
+
+ul.keyskills{
+ margin: 5px 0px 5px;
+}
+
+ul.li{
+ margin: 20px 0 0 0;
+}
+
+ul.technicalskills{
 
 }
