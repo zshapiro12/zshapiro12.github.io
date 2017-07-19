@@ -12,7 +12,7 @@ body {
 
   div {
   font-weight: 300;
-  font-family: "Open Sans", "Helvetica", "Georgia";
+  font-family: "Helvetica", "Georgia";
   font-weight:300;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .bottomsection {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 .rightsection{
@@ -54,7 +54,7 @@ body {
 }
 
 .job{
-
+ margin-top: 5px
 }
 
 .jobtitle{
@@ -101,11 +101,12 @@ body {
 }
 
 ul.keyskills{
- margin: 5px 0px 5px;
+
 }
 
 ul.li{
- margin: 20px 0 0 0;
+ margin: 20px;
+ line-height: 2em;
 }
 
 ul.technicalskills{
