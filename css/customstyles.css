@@ -18,7 +18,7 @@ body {
 }
 
 .zachbody, .experience, .sectionheader, .jobbox, .job, .jobtitle, .joborganization, .jobdescription {
-  border: 1px dashed white;
+  border: 1px
   padding: 5px;
 }
 
@@ -27,10 +27,11 @@ body {
   background-color: #F5F5F5;
 }
 
-.name{
-  font-size: 2em;
+.name {
+  font-size: 5em;
   font-weight: 300;
-  border: blue;
+  border-bottom: 5px solid #4682B4;
+  text-align: center;
 }
 
 .bottomsection {
@@ -38,12 +39,19 @@ body {
 }
 
 .rightsection{
-
+  background-color: lightgray;
 }
 
 .sectionheader{
   font-size: 1.7em;
   font-weight: bold;
+  margin: 15px 0 5px 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid #4682B4;
+}
+
+.personaldatabox {
+
 }
 
 .experience {
@@ -61,18 +69,19 @@ body {
 
 .jobtitle{
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.3em;
 
 }
 
 .joborganization{
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin: 0 auto 0 auto;
 
 }
 
 .jopdescription{
   font-size: .5em;
+  margin: 5px 0 5px 0;
 }
 
 .date{
@@ -84,15 +93,33 @@ body {
 }
 
 .degree{
-  font-style: bold;
+  font-weight: bold;
+  margin-top: 7px;
+  font-size: 1.3em;
 }
 
 .school{
+  font-size: 1.2em;
 
 }
 
 .technicalskillsbox {
 
+}
+
+.address {
+  margin-bottom: 1px;
+  font-weight: bold;
+}
+
+.phone {
+  margin: 5px 0 1px 0;
+  font-weight: bold;
+}
+
+.email {
+  margin: 5px 0 1px 0;
+  font-weight: bold;
 }
 
 .keyskillsbox{
@@ -110,4 +137,8 @@ ul.li {
 
 ul.technicalskills{
 
+}
+
+.address, .phone, .email {
+  font-size: bold;
 }
