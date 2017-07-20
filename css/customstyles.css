@@ -4,17 +4,19 @@
 body {
   font-sise: 12px;
   padding-top: 50px;
-
-  }
+  font-family: 'Helvetica', 'Georgia';
+  color: #778899;
+}
 
   * {
   box-sizing: border-box;
   }
-
+/* Selected complimentary fonts in css*/
   div {
   font-weight: 300;
   font-family: "Helvetica", "Georgia";
   font-weight:300;
+
 }
 
 .zachbody, .experience, .sectionheader, .jobbox, .job, .jobtitle, .joborganization, .jobdescription {
@@ -26,9 +28,9 @@ body {
   color: #444;
   background-color: #F5F5F5;
 }
-
+/* Centered name, put a wider blue line underneath*/
 .name {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 300;
   border-bottom: 5px solid #4682B4;
   text-align: center;
@@ -37,11 +39,12 @@ body {
 .bottomsection {
   padding-bottom: 70px;
 }
-
+/* Made the right section darker to stand out*/
 .rightsection{
   background-color: lightgray;
+  margin-top: 4.5px;
 }
-
+/* Added border to section headers*/
 .sectionheader{
   font-size: 1.7em;
   font-weight: bold;
@@ -62,7 +65,7 @@ body {
 .jobbox{
 
 }
-
+/* Adjusted margins, font size in job section*/
 .job{
  margin-top: 5px
 }
@@ -91,7 +94,7 @@ body {
 .education{
 
 }
-
+/* Bolded degrees*/
 .degree{
   font-weight: bold;
   margin-top: 7px;
@@ -106,7 +109,7 @@ body {
 .technicalskillsbox {
 
 }
-
+/* Bolded address, phone and email and adjusted margins*/
 .address {
   margin-bottom: 1px;
   font-weight: bold;
@@ -125,13 +128,26 @@ body {
 .keyskillsbox{
 
 }
-
+/* Added spacing in between skills*/
 ul.keyskills{
+  line-height: 1.5em;
+  list-style-type: none;
 
 }
 
-ul.li {
- line-height: 2em;
+ul.medialinks {
+  line-height: 1.7em;
+  list-style-type: none;
+}
+
+li.medialinks{
+ margin-top: 5px;
+
+}
+
+ul.technicalskills {
+ line-height: 1.5em;
+ list-style-type: none;
 
 }
 
