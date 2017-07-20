@@ -1,15 +1,16 @@
 /* No CSS Reset with Bootstrap */
 /*These initial styles come from here: http://getbootstrap.com/examples/starter-template/starter-template.css*/
 
-body {
-  font-sise: 12px;
+body{
+  font-size: 14px;
   padding-top: 50px;
   font-family: 'Helvetica', 'Georgia';
-  color: #778899;
+
 }
 
-  * {
+* {
   box-sizing: border-box;
+  color: #222;
   }
 /* Selected complimentary fonts in css*/
   div {
@@ -89,7 +90,9 @@ body {
 
 .date{
   font-style: italic;
+  border: 1px dashed blue;
 }
+
 
 .education{
 
@@ -97,13 +100,18 @@ body {
 /* Bolded degrees*/
 .degree{
   font-weight: bold;
-  margin-top: 7px;
   font-size: 1.3em;
+  margin-bottom: -1px;
+  border: 1px dashed blue;
+  margin-bottom: 10px;
+
+
 }
 
 .school{
-  font-size: 1.2em;
-
+  font-size: .9em;
+  border: 1px dashed blue;
+  font-weight: 300;
 }
 
 .technicalskillsbox {
@@ -136,7 +144,7 @@ ul.keyskills{
 }
 
 ul.medialinks {
-  line-height: 1.7em;
+  line-height: 1.em;
   list-style-type: none;
 }
 
@@ -158,3 +166,7 @@ ul.technicalskills{
 .address, .phone, .email {
   font-size: bold;
 }
+/* Media query for small device*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .rightsection {
+    background color: none;
