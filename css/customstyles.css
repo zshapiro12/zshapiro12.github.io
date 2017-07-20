@@ -90,7 +90,7 @@ body{
 
 .date{
   font-style: italic;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue;*/
 }
 
 
@@ -102,7 +102,7 @@ body{
   font-weight: bold;
   font-size: 1.3em;
   margin-bottom: -1px;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue;*/
   margin-bottom: 10px;
 
 
@@ -110,7 +110,7 @@ body{
 
 .school{
   font-size: .9em;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue;*/
   font-weight: 300;
 }
 
@@ -132,8 +132,10 @@ body{
   margin: 5px 0 1px 0;
   font-weight: bold;
 }
+/* Added writing clips, got rid of bullets*/
+.writingclips{
+  list-style-type: none;
 
-.keyskillsbox{
 
 }
 /* Added spacing in between skills*/
@@ -166,7 +168,13 @@ ul.technicalskills{
 .address, .phone, .email {
   font-size: bold;
 }
-/* Media query for small device*/
+/* Media query for extra small device*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rightsection {
     background color: none;
+    float: right;}
+
+  .date {
+    overflow-x: hidden;
+    float: left;
+  }
