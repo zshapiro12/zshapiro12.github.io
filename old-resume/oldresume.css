@@ -150,7 +150,6 @@ li a {
 #degrees li, #do li {
   margin: 3px;
 }
-<<<<<<< HEAD:style.css
 /* Media query for extra small device*/
 @media only screen and (max-width: 767px){
     #top {
@@ -165,44 +164,11 @@ li a {
       border-left: none
       padding: 10px 10px; }
     .sectionheader {
-=======
-
-span.bolding {
-  font-weight: 600;
-}
-
-
-/* Media query for extra small device*/
-@media only screen and (max-width: 767px) {
-  div#top {
-    position: relative;
-    border-bottom: 0px;
-  }
-
-  div#bottom {
-    top: 0px;
-  }
-
-  div#name {
-    font-size: 3em;
-  }
-
-  div.alljobs {
-    width: 100%;
-    float: none;
-    margin: 0 0;
-    border-left: 0px;
-    padding: 10px 10px;
-  }
-
-  div.sectionheader {
->>>>>>> e994614b6bdd55a38fb6fb24f881b2e279e5e21e:old-resume/style.css
       margin: 10px auto 15px auto;
       padding: 5px 10px;
       width: 97%;
       min-width: 0;
       text-align: center;
-<<<<<<< HEAD:style.css
       float: none;}
     #degrees, #do {
       margin: 15px 2% 0px 2%;
@@ -235,74 +201,16 @@ span.bolding {
     float: left;
     overflow-x: hidden;}
   #degrees, #do {
-=======
-      float: none;
-    }
-
-   ul#degrees, ul#do {
-      margin: 15px 2% 0px 2%;
-      padding: 0 20px;
-      width: 100%;
-      float: none;
-      -webkit-padding-start: 0px;
-      border-left: none;
-    }
-
-    div#education, div#skills, div#experience {
-      overflow-x: hidden;
-    }
-}
-
-/* Media query for small device*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  div#name {
-    font-size: 3.6em;
-  }
-}
-
-/* Media query for medium device*/
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  div#name {
-    font-size: 3.9em;
-  }
-}
-
-/* Media query for large device*/
-@media only screen and (min-width: 1200px) {
-
-  div#experience {
-    width: 60%;
-    float: right;
-    overflow-x: hidden;
-
-  }
-
-  div#education, div#skills {
-    width: 38.5%;
-    float: left;
-    overflow-x: hidden;
-  }
-
-  ul#degrees, ul#do {
->>>>>>> e994614b6bdd55a38fb6fb24f881b2e279e5e21e:old-resume/style.css
     margin: 15px 2% 0 2%;
     width: 100%;
     float: none;
     -webkit-padding-start: 0px;
-<<<<<<< HEAD:style.css
     border-left: none;}
   .sectionheader {
-=======
-    border-left: 0px;
-  }
-
-  div.sectionheader {
->>>>>>> e994614b6bdd55a38fb6fb24f881b2e279e5e21e:old-resume/style.css
     margin: 7px auto 15px auto;
     padding: 5px 10px;
     width: 97%;
     min-width: 0px;
-<<<<<<< HEAD:style.css
     float: none;}
   .alljobs {
     width: 100%;
@@ -316,17 +224,3 @@ span.bolding {
 span.bolding {
   font-weight: 600;
 }
-=======
-    float: none;
-  }
-
-  div.alljobs {
-    width: 100%;
-    float: none;
-    margin: 0px;
-    border-left: 0px;
-    padding: 0px 10px 10px 10px;
-  }
-
- }
->>>>>>> e994614b6bdd55a38fb6fb24f881b2e279e5e21e:old-resume/style.css
