@@ -86,6 +86,7 @@ span.lowercase {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .textblock {
     margin: 0px;
+    padding: 20px;
   }
 
   .graphicblock {
@@ -93,12 +94,13 @@ span.lowercase {
     border-right: 0;
     border-left: 0;
     border-bottom: bottom;
+    padding: 20px;
   }
 
   .topsection {
     padding: 20px;
   }
 
-  h1.topsection {
+.topsection h1 {
     font-size: 3.8rem;
   }
