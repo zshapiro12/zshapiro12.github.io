@@ -4,7 +4,7 @@
 body {
   padding-top: 50px;
   font-size: 12px;
-  font-family: 'Open Sans' 'Helvetica' 'Sans-Serif';
+  font-family: 'Open Sans', Helvetica, sans-serif';
 
 }
 
@@ -82,8 +82,8 @@ span.lowercase {
 .graphiccontent {
 
 }
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/* Media query for extra small device*/
+@media only screen and (max-width: 767px) {
   .textblock {
     margin: 0px;
     padding: 20px;
@@ -93,11 +93,11 @@ span.lowercase {
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    border-bottom: bottom;
+    border-bottom: 2px solid #777;
     padding: 20px;
   }
 
-  .topsection {
+.topsection {
     padding: 20px;
   }
 
