@@ -123,6 +123,10 @@ span.lowercase {
   background-color: #eee;
 }
 
+.legendbox h4 {
+  padding-left: 10px;
+}
+
 .legendentry {
   padding-left: 10px;
   font-size: 12px;
@@ -130,30 +134,34 @@ span.lowercase {
   margin: 0px 10px 2px 10px;
 }
 
-.legendentrychampions {
+.champions {
+  background-color: #000000;
+  color: #eee;
+}
+
+.finals {
+  background-color: #AD866A;
+  color: #eee;
 
 }
 
-.legendentryfinals {
+.semifinals {
+  background-color: #a8201a;
 
 }
 
-.legendentrysemifinals {
-
+.quarterfinals {
+  background-color: #ec9a29;
 }
 
-.legendentryquarterfinals {
-
+.roundof16 {
+  background-color: #0f8b8d;
 }
 
-.legendaryroundof16 {
-
+.roundof32 {
+  background-color: #dad2d8;
 }
 
-.legendentryroundof32 {
-
-}
-
-.legendentrynotinworldcup {
-
+.notinworldcup {
+  background-color: #ffffff;
 }
