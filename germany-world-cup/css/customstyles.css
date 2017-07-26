@@ -165,3 +165,7 @@ span.lowercase {
 .notinworldcup {
   background-color: #ffffff;
 }
+
+.graphiccontent p {
+  text-align: left;
+}
