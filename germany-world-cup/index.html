@@ -170,6 +170,11 @@
                subtitle: {
                    text: 'Source: <a href="http://www.fifa.com/worldcup/archive/brazil2014/statistics/teams/passes.html">FIFA</a>'
                },
+
+               credits: {
+                 enabled: false,
+               },
+
                xAxis: {
                    type: 'category',
                    labels: {
@@ -183,13 +188,14 @@
                yAxis: {
                    min: 0,
                    title: {
-                       text: 'Population (millions)'
+                       text: 'Average number of passes per game'
                    }
                },
                legend: {
                    enabled: false
                },
                tooltip: {
+                   enabled: false,
                    pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
                },
                series: [{
