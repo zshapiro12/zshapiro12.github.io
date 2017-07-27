@@ -169,3 +169,8 @@ span.lowercase {
 .graphiccontent p {
   text-align: left;
 }
+
+#passchart{
+  width: 847px;
+  height: 400px;
+}
