@@ -165,10 +165,12 @@
     <div class="row graphiccontainer" id="six">
       <div class="col-sm-3 col-sm-offset-1 textblock">
         <div class="col-sm-12 graphictitle">
-          <h2>A Passing Machine</h2>
+          <h2>Impresive on Offense, Stingy on Defense</h2>
         </div>
         <div class="col-sm-12 graphictext">
-          <p>Germany moved the ball around the field at a rapid clip throughout the tournament, passing the ball an average of 726 times per game -- well above the median of 513 passes for all 32 teams.</p>
+          <p>It may seem obvious, but one reason Germany won the World Cup is that it scored more goals per game, on average, than any other team in the tournament, while letting in fewer goals per game on average than all but one team, Costa Rica.</p>
+          <p>Teams on the right side of this graphic scored more goals per game on average than teams on the left. Teams on the top of the graphic let in more goals per game on average than teams at the bottom.</p>
+          <p>Hover over a team dot for exact figures.</p>
         </div>
         </div>
         <div class="col-sm-7 graphicblock">
@@ -268,15 +270,15 @@
             zoomType: 'xy'
         },
         title: {
-            text: 'Height Versus Weight of 507 Individuals by Gender'
+            text: 'Comparing Goals For and Goals Against for Each Team'
         },
         subtitle: {
-            text: 'Source: Heinz  2003'
+            text: 'Source: FIFA.com'
         },
         xAxis: {
             title: {
                 enabled: true,
-                text: 'Height (cm)'
+                text: 'Average of Goals For Per Game'
             },
             startOnTick: true,
             endOnTick: true,
@@ -284,18 +286,18 @@
         },
         yAxis: {
             title: {
-                text: 'Weight (kg)'
+                text: 'Average of Goals Against Per Game'
             }
         },
-        legend: {
-            layout: 'vertical',
+         legend: {
+          /**  layout: 'vertical',
             align: 'left',
             verticalAlign: 'top',
             x: 100,
             y: 70,
             floating: true,
             backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
-            borderWidth: 1
+            borderWidth: 1 */
         },
         plotOptions: {
             scatter: {
@@ -316,53 +318,59 @@
                     }
                 },
                 tooltip: {
-                    headerFormat: '<b>{series.name}</b><br>',
-                    pointFormat: '{point.x} cm, {point.y} kg'
+                    headerFormat: '<b>{point.key}</b><br>',
+                    pointFormat: '<b>Average Goals For:</b> {point.x}<br> <b>Average Goals Against:</b> {point.y}'
                 }
-            }
-        },
-        series: [
-                  {
-                    name: 'Reached Round of 16'
+          }
+    },
+    series: [
+              {
+                    name: 'Reached Round of 16',
                     color: '#FF3A20',
                     data: [
-                      { x: 2.6, 0.6, name: 'Germany', dataLabels: {enabled true, format: 'Germany'}},
-                      {x: 2.6,y: 0.6, name: 'Germany', dataLabels: {}
-                      {x: 2.4,y: 0.8, name: 'Colombia', dataLabels: {}
-                      {x: 2.1,y: 0.6, name: 'Netherlands', dataLabels: {}
-                      {x: 2,y: 0.6, name: 'France', dataLabels: {}
-                      {x: 1.8,y: 1.8, name: 'Algeria', dataLabels: {}
-                      {x: 1.8,y: 1.8, name: 'Switzerland', dataLabels: {}
-                      {x: 1.6,y: 2, name: 'Brazil', dataLabels: {}
-                      {x: 1.5,y: 1, name: 'Chile', dataLabels: {}
-                      {x: 1.3,y: 0.8, name: 'Mexico', dataLabels: {}
-                      {x: 1.3,y: 1.5, name: 'USA', dataLabels: {}
-                      {x: 1.2,y: 0.6, name: 'Belgium', dataLabels: {}
-                      {x: 1.1,y: 0.6, name: 'Argentina', dataLabels: {}
-                      {x: 1,y: 0.4, name: 'Costa Rica', dataLabels: {}
-                      {x: 1,y: 1.5, name: 'Uruguay', dataLabels: {}
-                      {x: 0.8,y: 1.3, name: 'Greece', dataLabels: {}
-                      {x: 0.8,y: 1.3, name: 'Nigeria', dataLabels: {}
-                      {x: 2,y: 2, name: 'Croatia', dataLabels: {}
-                      {x: 1.3,y: 1.3, name: 'Bosnia and Herzegovina', dataLabels: {}
-                      {x: 1.3,y: 1.7, name: 'Côte d'Ivoire'', dataLabels: {}
-                      {x: 1.3,y: 2, name: 'Ghana', dataLabels: {}
-                      {x: 1.3,y: 2.3, name: 'Spain', dataLabels: {}
-                      {x: 1.3,y: 2.3, name: 'Portugal', dataLabels: {}
-                      {x: 1,y: 1, name: 'Ecuador', dataLabels: {}
-                      {x: 1,y: 2, name: 'Korea Republic', dataLabels: {}
-                      {x: 1,y: 3, name: 'Australia', dataLabels: {}
-                      {x: 0.7,y: 1, name: 'Italy', dataLabels: {}
-                      {x: 0.7,y: 1, name: 'Russia', dataLabels: {}
-                      {x: 0.7,y: 1.3, name: 'England', dataLabels: {}
-                      {x: 0.7,y: 2, name: 'Japan', dataLabels: {}
-                      {x: 0.3,y: 1.3, name: 'Iran', dataLabels: {}
-                      {x: 0.3,y: 2.7, name: 'Honduras', dataLabels: {}
-                      {x: 0.3,y: 3, name: 'Cameroon', dataLabels: {}
+                        {x: 2.6,y: 0.6, name: 'German', dataLabels: {enabled: true, format: 'Germany'}},
+                        {x: 2.4,y: 0.8, name: 'Colombia', dataLabels: { enabled: true, format: 'Colombia'}},
+                        {x: 2.1,y: 0.6, name: 'Netherlands', dataLabels: { enabled: true, format: 'Netherlands'}},
+                        {x: 2,y: 0.6, name: 'France', dataLabels: { enabled: true, format: 'France'}},
+                        {x: 1.8,y: 1.8, name: 'Algeria', dataLabels: { enabled: true, format: 'Algeria'}},
+                        {x: 1.8,y: 1.8, name: 'Switzerland', dataLabels: { enabled: true, format: 'Switzerland'}},
+                        {x: 1.6,y: 2, name: 'Brazil', dataLabels: { enabled: true, format: 'Brazil'}},
+                        {x: 1.5,y: 1, name: 'Chile', dataLabels: { enabled: true, format: 'Chile'}},
+                        {x: 1.3,y: 0.8, name: 'Mexico', dataLabels: { enabled: true, format: 'Mexico'}},
+                        {x: 1.3,y: 1.5, name: 'USA', dataLabels: { enabled: true, format: 'USA'}},
+                        {x: 1.2,y: 0.6, name: 'Belgium', dataLabels: { enabled: true, format: 'Belgium'}},
+                        {x: 1.1,y: 0.6, name: 'Argentina', dataLabels: { enabled: true, format: 'Argentina'}},
+                        {x: 1,y: 0.4, name: 'Costa Rica', dataLabels: { enabled: true, format: 'Costa Rica'}},
+                        {x: 1,y: 1.5, name: 'Uruguay', dataLabels: { enabled: true, format: 'Uruguay'}},
+                        {x: 0.8,y: 1.3, name: 'Greece', dataLabels: { enabled: true, format: 'Greece'}},
+                        {x: 0.8,y: 1.3, name: 'Nigeria', dataLabels: { enabled: true, format: 'Nigeria'}},
+                ]
+              },
+              {
+                    name: 'Eliminated Round of 32',
+                    color: '#7cb5ec',
+                    data: [
+                        {x: 2,y: 2, name: 'Croatia', dataLabels: { enabled: true, format: 'Croatia'}},
+                        {x: 1.3,y: 1.3, name: 'Bosnia and Herzegovina', dataLabels: { enabled: true, format: 'Bosnia and Herzegovina'}},
+                        {x: 1.3,y: 1.7, name: 'Côte d\'Ivoire', dataLabels: { enabled: true, format: 'Côte d\'Ivoire'}},
+                        {x: 1.3,y: 2, name: 'Ghana', dataLabels: { enabled: true, format: 'Ghana'}},
+                        {x: 1.3,y: 2.3, name: 'Spain', dataLabels: { enabled: true, format: 'Spain'}},
+                        {x: 1.3,y: 2.3, name: 'Portugal', dataLabels: { enabled: true, format: 'Portugal'}},
+                        {x: 1,y: 1, name: 'Ecuador', dataLabels: { enabled: true, format: 'Ecuador'}},
+                        {x: 1,y: 2, name: 'Korea Republic', dataLabels: { enabled: true, format: 'Korea Republic'}},
+                        {x: 1,y: 3, name: 'Australia', dataLabels: { enabled: true, format: 'Australia'}},
+                        {x: 0.7,y: 1, name: 'Italy', dataLabels: { enabled: true, format: 'Italy'}},
+                        {x: 0.7,y: 1, name: 'Russia', dataLabels: { enabled: true, format: 'Russia'}},
+                        {x: 0.7,y: 1.3, name: 'England', dataLabels: { enabled: true, format: 'England'}},
+                        {x: 0.7,y: 2, name: 'Japan', dataLabels: { enabled: true, format: 'Japan'}},
+                        {x: 0.3,y: 1.3, name: 'Iran', dataLabels: { enabled: true, format: 'Iran'}},
+                        {x: 0.3,y: 2.7, name: 'Honduras', dataLabels: { enabled: true, format: 'Honduras'}},
+                        {x: 0.3,y: 3, name: 'Cameroon', dataLabels: { enabled: true, format: 'Cameroon'}}
+                          ]
+                  }
+                ]
 
-
-        }]
-    });
+      });
     </script>
   </body>
 </html>
