@@ -141,7 +141,7 @@
           <p>Among the four teams that played seven games – Germany, Brazil, Argentina, Netherlands – Brazil edged out Germany in average shots per game and attempts on target with 15.9 and 10.3, respectively. Germany averaged 14 shots a contest and sent 10.1 to the net, second in both categories for the Top Four.</p>
           <p>Perhaps no stat shows Germany’s dominance in the 2014 World Cup better than the difference between goals for and goals against per game. Just nine teams were in the plus margin, and just one, Germany, hit an even two.</p>
           <p>Common knowledge would suggest that the team with the more scoring opportunities “inside the area” would have the most success – but that wasn’t the case in 2014. Germany averaged 2.9 shots in the zone per game, ranking 32 of 32 in the category.</p>
-          <p>As the old adage goes, defense wins championships. A physical team, Germany won 13 tackles per game, and while that ranks 9th, only Brazil (13.6) played as many games.</p>
+          <p>As the old adage goes, defense wins championships. A physical team, Germany won 13 tackles per game, and while that ranks 9th, only Brazil (13.6) played as many games among the top eight.</p>
         </div>
       </div>
     </div>
@@ -158,77 +158,22 @@
       <div class="col-sm-7 graphicblock">
         <div class="col-sm-12 graphiccontent">
             <div id="passchart"></div>
-            <script src="Highcharts-5.0.13/code/highcharts.js"></script>
-            <script>
-            Highcharts.chart('passchart', {
-               chart: {
-                   type: 'bar'
-               },
-               title: {
-                   text: 'Average Number of Passes per Game by World Cup Quarterfinalists'
-               },
-               subtitle: {
-                   text: 'Source: <a href="http://www.fifa.com/worldcup/archive/brazil2014/statistics/teams/passes.html">FIFA</a>'
-               },
-
-               credits: {
-                 enabled: false,
-               },
-
-               xAxis: {
-                   type: 'category',
-                   labels: {
-                       rotation: 0,
-                       style: {
-                           fontSize: '13px',
-                           fontFamily: 'Verdana, sans-serif'
-                       }
-                   }
-               },
-               yAxis: {
-                   min: 0,
-                   title: {
-                       text: 'Average number of passes per game'
-                   }
-               },
-               legend: {
-                   enabled: false
-               },
-               tooltip: {
-                   enabled: false,
-                   pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
-               },
-               series: [{
-                   name: 'Population',
-                   data: [
-                       ['Germany', 726],
-                       ['Argentina', 617],
-                       ['France', 552],
-                       ['Netherlands', 551],
-                       ['Belgium', 534],
-                       ['Brazil', 516],
-                       ['Costa Rica', 448],
-                       ['Columbia', 414]
-
-                   ],
-                   dataLabels: {
-                       enabled: true,
-                       color: '#000',
-                       align: 'right',
-                       format: '{point.y}', // one decimal
-                     /*   y: 10, // 10 pixels down from the top */
-                       style: {
-                           fontSize: '10px',
-                           fontFamily: 'Helvetica'
-                       }
-                   }
-               }]
-           });
-            </script>
         </div>
       </div>
     </div>
 
+    <div class="row graphiccontainer" id="six">
+      <div class="col-sm-3 col-sm-offset-1 textblock">
+        <div class="col-sm-12 graphictitle">
+          <h2>A Passing Machine</h2>
+        </div>
+        <div class="col-sm-12 graphictext">
+          <p>Germany moved the ball around the field at a rapid clip throughout the tournament, passing the ball an average of 726 times per game -- well above the median of 513 passes for all 32 teams.</p>
+        </div>
+        </div>
+        <div class="col-sm-7 graphicblock">
+          <div class="col-sm-12 graphiccontent">
+            <div id="winlosschart"></div>
 
 
 
@@ -249,5 +194,175 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="Highcharts-5.0.13/code/highcharts.js"></script>
+    <script>
+    Highcharts.chart('passchart', {
+       chart: {
+           type: 'bar'
+       },
+       title: {
+           text: 'Average Number of Passes per Game by World Cup Quarterfinalists'
+       },
+       subtitle: {
+           text: 'Source: <a href="http://www.fifa.com/worldcup/archive/brazil2014/statistics/teams/passes.html">FIFA</a>'
+       },
+
+       credits: {
+         enabled: false,
+       },
+
+       xAxis: {
+           type: 'category',
+           labels: {
+               rotation: 0,
+               style: {
+                   fontSize: '13px',
+                   fontFamily: 'Verdana, sans-serif'
+               }
+           }
+       },
+       yAxis: {
+           min: 0,
+           title: {
+               text: 'Average number of passes per game'
+           }
+       },
+       legend: {
+           enabled: false
+       },
+       tooltip: {
+           enabled: false,
+           pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
+       },
+       series: [{
+           name: 'Population',
+           data: [
+               ['Germany', 726],
+               ['Argentina', 617],
+               ['France', 552],
+               ['Netherlands', 551],
+               ['Belgium', 534],
+               ['Brazil', 516],
+               ['Costa Rica', 448],
+               ['Columbia', 414]
+
+           ],
+           dataLabels: {
+               enabled: true,
+               color: '#000',
+               align: 'right',
+               format: '{point.y}', // one decimal
+             /*   y: 10, // 10 pixels down from the top */
+               style: {
+                   fontSize: '10px',
+                   fontFamily: 'Helvetica'
+               }
+           }
+       }]
+   });
+    </script>
+    <script>
+    Highcharts.chart('winlosschart', {
+        chart: {
+            type: 'scatter',
+            zoomType: 'xy'
+        },
+        title: {
+            text: 'Height Versus Weight of 507 Individuals by Gender'
+        },
+        subtitle: {
+            text: 'Source: Heinz  2003'
+        },
+        xAxis: {
+            title: {
+                enabled: true,
+                text: 'Height (cm)'
+            },
+            startOnTick: true,
+            endOnTick: true,
+            showLastLabel: true
+        },
+        yAxis: {
+            title: {
+                text: 'Weight (kg)'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            x: 100,
+            y: 70,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+            borderWidth: 1
+        },
+        plotOptions: {
+            scatter: {
+                marker: {
+                    radius: 5,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        marker: {
+                            enabled: false
+                        }
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<b>{series.name}</b><br>',
+                    pointFormat: '{point.x} cm, {point.y} kg'
+                }
+            }
+        },
+        series: [
+                  {
+                    name: 'Reached Round of 16'
+                    color: '#FF3A20',
+                    data: [
+                      { x: 2.6, 0.6, name: 'Germany', dataLabels: {enabled true, format: 'Germany'}},
+                      {x: 2.6,y: 0.6, name: 'Germany', dataLabels: {}
+                      {x: 2.4,y: 0.8, name: 'Colombia', dataLabels: {}
+                      {x: 2.1,y: 0.6, name: 'Netherlands', dataLabels: {}
+                      {x: 2,y: 0.6, name: 'France', dataLabels: {}
+                      {x: 1.8,y: 1.8, name: 'Algeria', dataLabels: {}
+                      {x: 1.8,y: 1.8, name: 'Switzerland', dataLabels: {}
+                      {x: 1.6,y: 2, name: 'Brazil', dataLabels: {}
+                      {x: 1.5,y: 1, name: 'Chile', dataLabels: {}
+                      {x: 1.3,y: 0.8, name: 'Mexico', dataLabels: {}
+                      {x: 1.3,y: 1.5, name: 'USA', dataLabels: {}
+                      {x: 1.2,y: 0.6, name: 'Belgium', dataLabels: {}
+                      {x: 1.1,y: 0.6, name: 'Argentina', dataLabels: {}
+                      {x: 1,y: 0.4, name: 'Costa Rica', dataLabels: {}
+                      {x: 1,y: 1.5, name: 'Uruguay', dataLabels: {}
+                      {x: 0.8,y: 1.3, name: 'Greece', dataLabels: {}
+                      {x: 0.8,y: 1.3, name: 'Nigeria', dataLabels: {}
+                      {x: 2,y: 2, name: 'Croatia', dataLabels: {}
+                      {x: 1.3,y: 1.3, name: 'Bosnia and Herzegovina', dataLabels: {}
+                      {x: 1.3,y: 1.7, name: 'Côte d'Ivoire'', dataLabels: {}
+                      {x: 1.3,y: 2, name: 'Ghana', dataLabels: {}
+                      {x: 1.3,y: 2.3, name: 'Spain', dataLabels: {}
+                      {x: 1.3,y: 2.3, name: 'Portugal', dataLabels: {}
+                      {x: 1,y: 1, name: 'Ecuador', dataLabels: {}
+                      {x: 1,y: 2, name: 'Korea Republic', dataLabels: {}
+                      {x: 1,y: 3, name: 'Australia', dataLabels: {}
+                      {x: 0.7,y: 1, name: 'Italy', dataLabels: {}
+                      {x: 0.7,y: 1, name: 'Russia', dataLabels: {}
+                      {x: 0.7,y: 1.3, name: 'England', dataLabels: {}
+                      {x: 0.7,y: 2, name: 'Japan', dataLabels: {}
+                      {x: 0.3,y: 1.3, name: 'Iran', dataLabels: {}
+                      {x: 0.3,y: 2.7, name: 'Honduras', dataLabels: {}
+                      {x: 0.3,y: 3, name: 'Cameroon', dataLabels: {}
+
+
+        }]
+    });
+    </script>
   </body>
 </html>
