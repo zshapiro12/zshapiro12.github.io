@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Top Rated and Highest Grossing Movies of the Century</title>
+
+    <!-- Bootstrap core CSS, which has been minified for faster load.  You can USE the styles in this stylesheet, but NEVER EDIT THIS FILE-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--Put all of your custom styles in here.  Notice it comes below the core boostrap.min.css (core files). The order is important-->
+     <link href="css/customstyles.css" rel="stylesheet">
+
+     <link rel="stylesheet" type="text/css" href="https://fonts.google.com/?selection.family=Open+Sans"/>
+
+   </head>
+
+   <body>
+
+     <nav class="navbar navbar-inverse navbar-fixed-top"><!--beginning of navbar-->
+       <div class="container">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">Movies of the Past 100 Years</a>
+         </div>
+         <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="active">Top</a></li>
+             <li><a href="#one">1</a></li>
+             <li><a href="#two">2</a></li>
+             <li><a href="#three">3</a></li>
+             <li><a href="#four">4</a></li>
+             <li><a href="#five">5</a></li>
+             <li><a href="#six">6</a></li>
+           </ul>
+         </div><!--/.nav-collapse -->
+       </div>
+     </nav><!--end of navbar-->
+     <div class="row topsection">
+       <div class="col-sm-6 col-sm-offset-3 topbox">
+         <h1></h1>
+         <div class="byline"><span class="lowercase">by </span>ZACH SHAPIRO</div>
+         <p class="lead"></p>
+       </div>
+     </div>
+
+     <div class="row graphiccontainer" id="one">
+       <div class="col-sm-3 col-sm-offset-1 textblock">
+         <div class="col-sm-12 graphictitle">
+           <h2>Top Grossing Movies For Each Decade</h2>
+         </div>
+         <div class="col-sm-12 graphictext">
+           <p></p>
+           <p></p>
+         </div>
+       </div>
+
+       <div class="col-sm-7 graphicblock">
+         <div class="sol-sm-12 graphiccontent"><iframe src="https://docs.google.com/spreadsheets/d/1XsV1hZ-uwQOENqsuRyCZH5GMinJF_rjXJfbnrlWAlNc/pubhtml?widget=true&amp;headers=false" webkitallowfullscreen mozallowfullscreen frameborder='0'></iframe>
+         </div>
+       </div>
+     </div>
+
+
+
+   <!-- Bootstrap core JavaScript
+   ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <!--All of these links below make interactivity, which we'll add later, work. This-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+   <!--This is the core boostrap javascript file this is the original, but we need to correct the path-->
+   <script src="js/bootstrap.min.js"></script>
+   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+   <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+   <script src="Highcharts-5.0.13/code/highcharts.js"></script>
+   <script>
+   Highcharts.chart('decadechart', {
+     chart: {
+         type: 'column'
+     },
+     title: {
+         text: 'Total Number of Movies in Top 250 by Decade'
+     },
+     subtitle: {
+         text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+     },
+     xAxis: {
+         type: 'category',
+         labels: {
+             rotation: -45,
+             style: {
+                 fontSize: '13px',
+                 fontFamily: 'Verdana, sans-serif'
+             }
+         }
+     },
+     yAxis: {
+         min: 0,
+         title: {
+             text: 'Population (millions)'
+         }
+     },
+     legend: {
+         enabled: false
+     },
+     tooltip: {
+         pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
+     },
+     series: [{
+         name: 'Population',
+         data: [
+             ['Shanghai', 23.7],
+             ['Lagos', 16.1],
+             ['Istanbul', 14.2],
+             ['Karachi', 14.0],
+             ['Mumbai', 12.5],
+             ['Moscow', 12.1],
+             ['São Paulo', 11.8],
+             ['Beijing', 11.7],
+             ['Guangzhou', 11.1],
+             ['Delhi', 11.1],
+             ['Shenzhen', 10.5],
+             ['Seoul', 10.4],
+             ['Jakarta', 10.0],
+             ['Kinshasa', 9.3],
+             ['Tianjin', 9.3],
+             ['Tokyo', 9.0],
+             ['Cairo', 8.9],
+             ['Dhaka', 8.9],
+             ['Mexico City', 8.9],
+             ['Lima', 8.9]
+         ],
+         dataLabels: {
+             enabled: true,
+             rotation: -90,
+             color: '#FFFFFF',
+             align: 'right',
+             format: '{point.y:.1f}', // one decimal
+             y: 10, // 10 pixels down from the top
+             style: {
+                 fontSize: '13px',
+                 fontFamily: 'Verdana, sans-serif'
+             }
+         }
+     }]
+ });
