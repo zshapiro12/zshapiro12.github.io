@@ -93,21 +93,26 @@ h1, p {
 }
 
 .notincluded {
-  color: #eeeeee;
+  background-color: #cccccc;
+  color: #eee
 }
 
 .fourgross {
-  color: #0b5394;
+  background-color: #0b5394;
+  color: #eee;
 }
 
 .threegross {
-  color: #38761d;
+  background-color: #38761d;
+  color: #eee;
 }
 
 .twogross {
-  color: #cc0000;
+  background-color: #cc0000;
+  color: #eee;
 }
 
 .topgross {
-  color: #20124d;
+  background-color: #20124d;
+  color: #eee;
 }
