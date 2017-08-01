@@ -50,9 +50,9 @@
      </nav><!--end of navbar-->
      <div class="row topsection">
        <div class="col-sm-6 col-sm-offset-3 topbox">
-         <h1></h1>
+         <h1>A Visual Look at Our Favorite Movies</h1>
          <div class="byline"><span class="lowercase">by </span>ZACH SHAPIRO</div>
-         <p class="lead">    </p>
+         <p class="lead">There are movies we think are good and movies we all pay to go see. These movies are not always the same. This is a vidual look at our favorite movies, using IMDB ratings and data of box office ticket sales (adjusted for inflation) from Box Office Mojo</p>
        </div>
      </div>
 
@@ -84,10 +84,50 @@
          </div>
        </div>
        <div class="col-sm-7 graphicblock">
-         <div class="col-sm-12 graphiccontent"><iframe class="map" src="https://fusiontables.google.com/embedviz?q=select+col4%3E%3E1+from+1H6QbCDWNh72hV1GwCsywN2ARYmJp589578gL2bXN&amp;viz=MAP&amp;h=false&amp;lat=41.09876016258733&amp;lng=56.689453125&amp;t=1&amp;z=3&amp;l=col4%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML" width="100%" height="480"></iframe>
+         <div class="col-sm-12 graphiccontent"><iframe class="map" width="100%" height="600" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col4%3E%3E1+from+1H6QbCDWNh72hV1GwCsywN2ARYmJp589578gL2bXN&amp;viz=MAP&amp;h=false&amp;lat=41.09876016258733&amp;lng=56.689453125&amp;t=1&amp;z=3&amp;l=col4%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML" width="100%" height="480"></iframe>
+         <div class="legendbox">
+           <h4>Ticket Sales Per 1,000</h4>
+             <div class="legendary notincluded">Not Included</div>
+             <div class="legendentry fourgross">$1,000-$5,000</div>
+             <div class="legendentry threegross">$5,001-$15,000</div>
+             <div class="legendentry twogross">$15,001-$30,000</div>
+             <div class="legendentry topgross">$30,000-Above</div>
        </div>
      </div>
    </div>
+
+   <div class="row graphiccontainer" id="three">
+     <div class="col-sm-3 col-sm-offset-1 textblock">
+       <div class="col-sm-12 graphictitle">
+         <h2>Top 250 by Decade</h2>
+       </div>
+       <div class="col-sm-12 graphictext">
+         <p> </p>
+       </div>
+     </div>
+     <div class="col-sm-7 graphicblock">
+       <div class="col-sm-12 graphiccontent">
+         <div id="decadechart"></div>
+       </div>
+     </div>
+   </div>
+
+  <div class="row graphiccontainer" id="five">
+     <div class="col-sm-3 col-sm-offset-1 textblock">
+       <div class="col-sm-12 graphictitle">
+         <h2>Star Wars Movies</h2>
+       </div>
+       <div class="col-sm-12 graphictext">
+         <p></p>
+         <p></p>
+         <p>Hover over a team dot for exact figures.</p>
+       </div>
+       </div>
+       <div class="col-sm-7 graphicblock">
+         <div class="col-sm-12 graphiccontent">
+           <div id="starwarschart"></div>
+
+
 
    <!-- Bootstrap core JavaScript
    ================================================== -->
@@ -114,6 +154,7 @@
      xAxis: {
          type: 'category',
          labels: {
+
              rotation: -45,
              style: {
                  fontSize: '13px',
@@ -124,13 +165,14 @@
      yAxis: {
          min: 0,
          title: {
-             text: 'Population (millions)'
+             text: 'Total in Top 250'
          }
      },
      legend: {
          enabled: false
      },
      tooltip: {
+         enabled: false,
          pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
      },
      series: [{
@@ -156,11 +198,111 @@
              format: '{point.y:.1f}', // one decimal
              y: 10, // 10 pixels down from the top
              style: {
-                 fontSize: '13px',
+                 fontSize: '9px',
                  fontFamily: 'Verdana, sans-serif'
              }
          }
      }]
  });
   </script>
-</script>
+  <script>
+  Highcharts.chart('starwarschart', {
+      chart: {
+          type: 'scatter',
+          zoomType: 'xy'
+      },
+      title: {
+          text: 'Comparing Adjusted Gross Income and IMDB Rating for Eight Star Wars Movies'
+      },
+      subtitle: {
+          text: 'Source: '
+      },
+
+      credits: {
+        enabled: false,
+      },
+
+      xAxis: {
+          title: {
+              enabled: true,
+              text: 'Adjusted Gross Income'
+          },
+          startOnTick: true,
+          endOnTick: true,
+          showLastLabel: true
+      },
+      yAxis: {
+          title: {
+              text: 'IMDB Rating'
+          }
+      },
+       legend: {
+        /**  layout: 'vertical',
+          align: 'left',
+          verticalAlign: 'top',
+          x: 100,
+          y: 70,
+          floating: true,
+          backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+          borderWidth: 1 */
+      },
+      plotOptions: {
+          scatter: {
+              marker: {
+                  radius: 5,
+                  states: {
+                      hover: {
+                          enabled: true,
+                          lineColor: 'rgb(100,100,100)'
+                      }
+                  }
+              },
+              states: {
+                  hover: {
+                      marker: {
+                          enabled: false
+                      }
+                  }
+              },
+              tooltip: {
+                  headerFormat: '<b>{point.key}</b><br>',
+                  pointFormat: '<b>Adjusted Gross Income:</b> {point.x}<br> <b>IMDB Rating:</b> {point.y}'
+              }
+        }
+  },
+  series: [
+            {
+                  name: 'Original Trilogy',
+                  color: '#7cb5ec',
+                  data: [
+                    {x: 1583483200,y: 8.6, name:'Star Wars: Episode IV - A New Hope', dataLabels: {enabled: true, format: 'Star Wars: Episode IV - A New Hope'}},
+                    {x: 872825900,y: 8.7, name:'Star Wars: Episode V - The Empire Strikes Back', dataLabels: {enabled: true, format: 'Star Wars: Episode V - The Empire Strikes Back'}},
+                    {x: 836188200,y: 8.3, name:'Star Wars: Episode VI - Return of the Jedi', dataLabels: { enabled: true, format: 'Star Wars Epidode VI - Return of the Jedi'}},
+
+                        ]
+            },
+            {
+                  name: 'Prequels',
+                  color: '#FF3A20',
+
+                  data: [
+                    {x: 802874300,y: 6.5, name: 'Star Wars: Episode I - The Phantom Menace', dataLabels:{ enabled: true, format: 'Star Wars: Episode I - The Phantom Menace'}},
+                    {x: 475334700,y: 6.6, name: 'Star Wars: Episode II - Attack of the Clones', dataLabels:{ enabled: true, format: 'Star Wars: Episode II - Attack of the Clones'}},
+                    {x: 527395500,y: 7.6, name: 'Star Wars: Episode III - Revenge of the Sith', dataLabels:{ enabled: true, format: 'Star Wars: Episode III - Revenge of the Sith'}}
+
+                        ]
+             },
+             {
+                  name: 'New Generation',
+                  color:'#47d147',
+                  date: [
+                    {x: 961143200,y: 8, name: 'Star Wars: The Force Awakens', dataLabels:{ enabled: true, format: 'Star Wars: The Force Awakens'}},
+                    {x: 537326000,y: 7.9, name:'Rogue One: A Star Wars Story', dataLabels:{ enabled: true, format: 'Star Wars: The Force Awakens'}}
+
+                      ]
+             },
+
+          ]
+
+      });
+    </script>
