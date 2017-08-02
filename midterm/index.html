@@ -62,8 +62,8 @@
            <h2>Top Grossing Movies For Each Decade</h2>
          </div>
          <div class="col-sm-12 graphictext">
-           <p>While it's not always a given that a high-grossing movie will be an instant classic, you can probably bet that the film will carry historical significance. The ten films in this slide are no exception.    </p>
-           <p></p>
+           <p>While it's not always a given that a high-grossing movie will be an instant classic, you can probably bet that the film will carry historical significance. The ten films in this slide are no exception.</p>
+           <p>Star Wars paved the way in science fiction, while the Sound of Music remains the gold standard for musicals. It's easy to see how those films joined Gone With The Wind as the highest grossing in its respective decade.</p>
          </div>
        </div>
 
@@ -80,7 +80,7 @@
          </div>
          <div class="col-sm-12 graphictext">
            <p>Here, we take a look at how the box office fared outside of the U.S. As the map highlights, most countries ticket sales were between $1,000-$5,000 per person, though a select few were pulling in over $15,000.</p>
-           <p>Hugh Jackman and Nicole Kidman would be pleased to see the support from the Land Down Under.</p>
+           <p>Hugh Jackman and Nicole Kidman would be pleased to see their home country's support of film.</p>
          </div>
        </div>
        <div class="col-sm-7 graphicblock">
@@ -112,15 +112,33 @@
        </div>
      </div>
    </div>
-
    <div class="row graphiccontainer" id="four">
+      <div class="col-sm-3 col-sm-offset-1 textblock">
+        <div class="col-sm-12 graphictitle">
+          <h2>Star Wars Movies</h2>
+        </div>
+        <div class="col-sm-12 graphictext">
+          <p>Box office numbers don't always reflect the quality of the film, but in the case of Star Wars it's pretty accurate. The original trilogy – "A New Hope," "Return of the Jedi" and "The Empire Stikes Back" – all pulled in over $8 million while receiving at least an eight rating from IMDB. The contrast with the prequels is stark.</p>
+          <p>From a quality standpoint, George Lucas barely redeemed himself after "The Phantom Menace" but the lost interest and faith from viewers was clear. "Attack of the Clones" and "Revenge of the Sith" scored a 6.5 and 7.6, respectively, but dropped nearly $200 million at the box office.</p>
+          <p>Hover over a team dot for exact figures.</p>
+        </div>
+        </div>
+        <div class="col-sm-7 graphicblock">
+          <div class="col-sm-12 graphiccontent">
+            <div id="starwarschart"></div>
+          </div>
+        </div>
+      </div>
+
+   <div class="row graphiccontainer" id="five">
      <div class="col-sm-3 col-sm-offset-1 textblock">
        <div class="col-sm-12 graphictitle">
          <h2>Winning Over Viewers and Critics, Equally</h2>
        </div>
        <div class="col-sm-12 graphictext">
          <p>So much for "One for you, one for me."</p>
-         <p>These eight directors made multiple films that not only brought in big bucks but also landed on the IMDB Top 250. Disney/Pixar in particular showed that it's possible to attrack a wide audience, mainly kids, and still make a quality film. Other movies that landed directors on the short list are "Forrest Gump" and "Back to the Future" (Robert Zemeckis); the Lord of the Rings Trilogy (Peter Jackson); and "Psycho" and "Rear Window" for Alfred Hitchcock. Spielberg leads the pack with five films in both categories.</p>
+         <p>These eight directors made multiple films that not only brought in big bucks but also landed on the IMDB Top 250. Disney/Pixar in particular showed that it's possible to attrack a wide audience, mainly kids, and still make a quality film.</p>
+        <p>Other movies that landed directors on the short list are "Forrest Gump" and "Back to the Future" (Robert Zemeckis); the Lord of the Rings Trilogy (Peter Jackson); and "Psycho" and "Rear Window" for Alfred Hitchcock. Spielberg leads the pack with five films in both categories.</p>
        </div>
      </div>
      <div class="col-sm-7 graphicblock">
@@ -130,20 +148,23 @@
      </div>
    </div>
 
-  <div class="row graphiccontainer" id="five">
+   <div class="row graphiccontainer" id="six">
      <div class="col-sm-3 col-sm-offset-1 textblock">
        <div class="col-sm-12 graphictitle">
-         <h2>Star Wars Movies</h2>
+         <h2>Money Isn't Everything</h2>
        </div>
        <div class="col-sm-12 graphictext">
-         <p>Box office numbers don't always reflect the quality of the film, but in the case of Star Wars it's pretty accurate. The original trilogy – "A New Hope," "Return of the Jedi" and "The Empire Stikes Back" – all pulled in over $8 million while receiving at least an eight rating from IMDB. The contrast with the prequels is stark.</p>
-         <p>From a quality standpoint, George Lucas barely redeemed himself after "The Phantom Menace" but the lost interest and faith from viewers was clear. "Attack of the Clones" and "Revenge of the Sith" scored a 6.5 and 7.6, respectively, but dropped nearly $200 million at the box office.</p>
-         <p>Hover over a team dot for exact figures.</p>
+         <p>These 10 films didn't drive in its deserved crowd, those involved in the production didn't dwell over the box office numbers for too long. History judged them well and that's what counts.</p>
+         <p>That every movie on this list ranks in IMDB's Top 20 is proof that money is hardly a measuring stick for quality.</p>
+         <p>(A note: 12 Angry Men is the 5th ranked movie, according to IMDB. Still looking for the unadjusted box office numbers.)</p>
        </div>
+     </div>
+     <div class="col-sm-7 graphicblock">
+       <div class="col-sm-12 graphiccontent">
+           <div id="toprankedchart"></div>
        </div>
-       <div class="col-sm-7 graphicblock">
-         <div class="col-sm-12 graphiccontent">
-           <div id="starwarschart"></div>
+     </div>
+   </div>
 
 
 
@@ -211,7 +232,7 @@
          dataLabels: {
              enabled: true,
              rotation: -90,
-             color: '#FFFFFF',
+             color: '#000000',
              align: 'right',
              format: '{point.y:.1f}', // one decimal
              y: 10, // 10 pixels down from the top
@@ -380,7 +401,7 @@
              {
                   name: 'New Generation',
                   color:'#47d147',
-                  date: [
+                  data: [
                     {x: 961143200,y: 8, name: 'Star Wars: The Force Awakens', dataLabels:{ enabled: true, format: 'Star Wars: The Force Awakens'}},
                     {x: 537326000,y: 7.9, name:'Rogue One: A Star Wars Story', dataLabels:{ enabled: true, format: 'Star Wars: The Force Awakens'}}
 
@@ -390,4 +411,97 @@
           ]
 
       });
+    </script>
+    <script>
+    Highcharts.chart('toprankedchart', {
+        chart: {
+            type: 'scatter',
+            zoomType: 'xy'
+        },
+        title: {
+            text: 'Comparing Adjusted Gross Income and IMDB Rating for Eight Star Wars Movies'
+        },
+        subtitle: {
+            text: 'Source: '
+        },
+
+        credits: {
+          enabled: false,
+        },
+
+        xAxis: {
+            title: {
+                enabled: true,
+                text: 'Unadjusted Gross Income'
+            },
+            startOnTick: true,
+            endOnTick: true,
+            showLastLabel: true
+        },
+        yAxis: {
+            title: {
+                text: 'IMDB Ranking'
+            }
+        },
+         legend: {
+          /**  layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            x: 100,
+            y: 70,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+            borderWidth: 1 */
+        },
+        plotOptions: {
+            scatter: {
+                marker: {
+                    radius: 5,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        marker: {
+                            enabled: false
+                        }
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<b>{point.key}</b><br>',
+                    pointFormat: '<b>Adjusted Gross Income:</b> {point.x}<br> <b>IMDB Rating:</b> {point.y}'
+                }
+          }
+    },
+    series: [
+              {
+                    name: 'Ranked In Top 10',
+                    color: '#9932CC',
+                    data: [
+                      {x: 28.3,y: 1, name: 'Shawshank Redemption', dataLabels:{ enabled: true, format: 'Shawshank Redemption'}},
+                      {x: 47.5,y: 3, name: 'Godfather Part II', dataLabels:{ enabled: true, format: 'Godfather Part II'}},
+                      /*{x: NULL,y: 5, name: '12 Angry Men', dataLabels:{ enabled: true, format: '12 Angry Men'}},*/
+                      {x: 97.7,y: 6, name: 'Schindlers List', dataLabels:{ enabled: true, format: 'Schindlers List'}},
+                      {x: 107.9,y: 7, name: 'Pulp Fiction', dataLabels:{ enabled: true, format: 'Pulp Fiction'}},
+                      {x: 25.1,y: 9, name: 'The Good, the Bad and the Ugly', dataLabels:{ enabled: true, format: 'The Good, the Bad and the Ugly'}},
+                      {x: 37.3,y: 10, name: 'Fight Club', dataLabels:{ enabled: true, format: 'Fight Club'}}
+
+                          ]
+              },
+              {
+                    name: 'Ranked In Top 20',
+                    color: '#008080',
+                    data: [
+                      {x: 292.6,y: 14, name: 'Inception', dataLabels:{ enabled: true, format: 'Inception'}},
+                      {x: 46.8,y: 17, name: 'Goodfellas', dataLabels:{ enabled: true, format: 'Goodfellas'}},
+                      {x: 171.5,y: 18, name: 'The Matrix', dataLabels:{ enabled: true, format: 'The Matrix'}}
+
+                          ]
+               }
+             ]
+        });
     </script>

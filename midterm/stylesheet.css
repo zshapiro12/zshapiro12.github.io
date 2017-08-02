@@ -1,7 +1,9 @@
 body {
   padding-top: 50px;
-  font-size: 12px;
-  font-family: 'Open Sans', Helvetica, sans-serif';
+  font-size: 14px;
+  font-family: 'Open Sans', Helvetica, Sans-Serif;
+  background-color:		#C0C0C0;
+  color: 	#B22222;
 }
 
 h1, p {
@@ -49,6 +51,10 @@ h1, p {
 
 }
 
+.graphictitle{
+  color: 	#000000;
+}
+
 .graphictext {
   text-align: left;
 
@@ -72,11 +78,16 @@ h1, p {
 }
 
 #directorschart {
+  background-color: #B22222
 
 }
 
 #five {
-  
+
+}
+
+#toprankedchart {
+
 }
 
 .legendbox {
@@ -124,4 +135,8 @@ h1, p {
 .topgross {
   background-color: #20124d;
   color: #eee;
+}
+
+h1 {
+  color: 	#000000;
 }
