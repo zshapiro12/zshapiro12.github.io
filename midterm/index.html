@@ -79,8 +79,8 @@
            <h2>International Box Office Ticket Sales Per Person</h2>
          </div>
          <div class="col-sm-12 graphictext">
-           <p></p>
-           <p></p>
+           <p>Here, we take a look at how the box office fared outside of the U.S. As the map highlights, most countries ticket sales were between $1,000-$5,000 per person, though a select few were pulling in over $15,000.</p>
+           <p>Hugh Jackman and Nicole Kidman would be pleased to see the support from the Land Down Under.</p>
          </div>
        </div>
        <div class="col-sm-7 graphicblock">
@@ -103,12 +103,29 @@
          <h2>Top 250 by Decade</h2>
        </div>
        <div class="col-sm-12 graphictext">
-         <p> </p>
+         <p>Every decade had its share of classics, but IMDB was particularly impressed with cinema at the turn of the century. Ridley Scott's "Gladiator" kicked off a strong 10 years and "Up" closed it well, becoming the first animated movie to be nominated for Best Original Film at the 2009 Academy Awards.</p>
        </div>
      </div>
      <div class="col-sm-7 graphicblock">
        <div class="col-sm-12 graphiccontent">
          <div id="decadechart"></div>
+       </div>
+     </div>
+   </div>
+
+   <div class="row graphiccontainer" id="four">
+     <div class="col-sm-3 col-sm-offset-1 textblock">
+       <div class="col-sm-12 graphictitle">
+         <h2>Winning Over Viewers and Critics, Equally</h2>
+       </div>
+       <div class="col-sm-12 graphictext">
+         <p>So much for "One for you, one for me."</p>
+         <p>These eight directors made multiple films that not only brought in big bucks but also landed on the IMDB Top 250. Disney/Pixar in particular showed that it's possible to attrack a wide audience, mainly kids, and still make a quality film. Other movies that landed directors on the short list are "Forrest Gump" and "Back to the Future" (Robert Zemeckis); the Lord of the Rings Trilogy (Peter Jackson); and "Psycho" and "Rear Window" for Alfred Hitchcock. Spielberg leads the pack with five films in both categories.</p>
+       </div>
+     </div>
+     <div class="col-sm-7 graphicblock">
+       <div class="col-sm-12 graphiccontent">
+           <div id="directorschart"></div>
        </div>
      </div>
    </div>
@@ -119,8 +136,8 @@
          <h2>Star Wars Movies</h2>
        </div>
        <div class="col-sm-12 graphictext">
-         <p></p>
-         <p></p>
+         <p>Box office numbers don't always reflect the quality of the film, but in the case of Star Wars it's pretty accurate. The original trilogy – "A New Hope," "Return of the Jedi" and "The Empire Stikes Back" – all pulled in over $8 million while receiving at least an eight rating from IMDB. The contrast with the prequels is stark.</p>
+         <p>From a quality standpoint, George Lucas barely redeemed himself after "The Phantom Menace" but the lost interest and faith from viewers was clear. "Attack of the Clones" and "Revenge of the Sith" scored a 6.5 and 7.6, respectively, but dropped nearly $200 million at the box office.</p>
          <p>Hover over a team dot for exact figures.</p>
        </div>
        </div>
@@ -204,7 +221,74 @@
              }
          }
      }]
- });
+   });
+  </script>
+  <script>
+  Highcharts.chart('directorschart', {
+     chart: {
+         type: 'bar'
+     },
+     title: {
+         text: 'Directors with multiple films on both lists'
+     },
+     subtitle: {
+         text: 'Source: <a href="http://www.boxofficemojo.com/alltime/world/">Box Office</a>,<a href="http://www.imdb.com/chart/top">IMDB</a>'
+
+     },
+
+     credits: {
+       enabled: false,
+     },
+
+     xAxis: {
+         type: 'category',
+         labels: {
+             rotation: 0,
+             style: {
+                 fontSize: '13px',
+                 fontFamily: 'Verdana, sans-serif'
+             }
+         }
+     },
+     yAxis: {
+         min: 0,
+         title: {
+             text: 'Number of films on both the Box Office Top 200 and IMDB Top 250'
+         }
+     },
+     legend: {
+         enabled: false
+     },
+     tooltip: {
+         enabled: false,
+         pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
+     },
+     series: [{
+         name: 'Directors',
+         data: [
+           ['Disney/Pixar',8],
+           ['Steven Spielberg',5],
+           ['George Lucas',3],
+           ['Peter Jackson',3],
+           ['Alfred Hitchcock',2],
+           ['Christopher Nolan',2],
+           ['George Roy Hill',2],
+           ['Robert Zemeckis',2]
+
+         ],
+         dataLabels: {
+             enabled: true,
+             color: '#000',
+             align: 'right',
+             format: '{point.y}', // one decimal
+           /*   y: 10, // 10 pixels down from the top */
+             style: {
+                 fontSize: '10px',
+                   fontFamily: 'Helvetica'
+                 }
+             }
+         }]
+     });
   </script>
   <script>
   Highcharts.chart('starwarschart', {
