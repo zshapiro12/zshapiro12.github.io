@@ -166,6 +166,11 @@ span.lowercase {
   background-color: #ffffff;
 }
 
+#show {
+  display: none;
+  background-color:
+}
+
 .graphiccontent p {
   text-align: left;
 }
