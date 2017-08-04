@@ -175,11 +175,19 @@
           <p>It may seem obvious, but one reason Germany won the World Cup is that it scored more goals per game, on average, than any other team in the tournament, while letting in fewer goals per game on average than all but one team, Costa Rica.</p>
           <p>Teams on the right side of this graphic scored more goals per game on average than teams on the left. Teams on the top of the graphic let in more goals per game on average than teams at the bottom.</p>
           <p>Hover over a team dot for exact figures.</p>
+          <button type="button" class="btn btn-primary btn-xs" id="togglequarterfinalists">
+          <span id="hideteams">Hide Eliminated Teams</span>
+          <span id="showteams">Show Eliminated Teams</span>
+        </button>
         </div>
         </div>
+
         <div class="col-sm-7 graphicblock">
           <div class="col-sm-12 graphiccontent">
             <div id="winlosschart"></div>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -270,7 +278,7 @@
    });
     </script>
     <script>
-    Highcharts.chart('winlosschart', {
+  var chart=  Highcharts.chart('winlosschart', {
         chart: {
             type: 'scatter',
             zoomType: 'xy'

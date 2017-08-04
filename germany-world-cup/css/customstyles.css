@@ -184,3 +184,7 @@ span.lowercase {
   width: 800px;
   height: 600px;
 }
+
+#showteams {
+  display: none;
+}
