@@ -2,7 +2,7 @@
 /*These initial styles come from here: http://getbootstrap.com/examples/starter-template/starter-template.css*/
 
 body {
-  padding-top: 500px;
+  padding-top: 50px;
 
 }
 
@@ -11,7 +11,67 @@ body {
 
 }
 
-.experience, .education {
-  height: 200px;
-  border: 1px solid #ccc;
+.byline {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #777;
+  margin: 15px 0 20px 0;
+  font-style: italic;
+}
+
+.lead p {
+  font-size: 1.75rem;
+}
+
+.containerzachbody {
+
+}
+
+.topsection {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.topbox h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.graphiccontainer {
+  margin: 0 20px 0 0;
+  padding: 20px 20px;
+}
+
+.textblock {
+  margin: 0 20px 0 0;
+  padding: 0 20px 0 20px;
+}
+
+#one {
+
+}
+
+.graphicblock {
+
+}
+
+.graphictitle{
+  color: 	#000000;
+}
+
+.graphictext {
+  text-align: left;
+}
+
+.graphicblock {
+
+}
+
+.graphiccontent {
+
+}
+
+#uninsuredchart {
+
 }

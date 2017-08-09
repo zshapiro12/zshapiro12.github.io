@@ -49,42 +49,98 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </nav><!--end of navbar-->
+    </nav>
 
-    <!-- <div class="container"> beginning of main body section of document
-     <div class="row experience">
-       <div class="col-md-2 sectionheader">experience</div>
-       <div class="col-md-10 jobbox">
-         <div class="col-xs-12 job">
-           <div class="col-xs-12 jobtitle">jobtitle</div>
-           <div class="col-xs-12 joborganization">joborganization</div>
-           <div class="col-xs-12 jobdescription">jobdescription</div>
+    <div class="containerzachbody"> <!--beginning of main body section of document -->
+    <div class="topsection">
+       <div class="col-sm-12 col-sm-offset-3 topbox">
+         <h1>Title</h1>
+       <div class="byline"><span class="lowercase">by </span>Zach Shapiro</div>
+       <p class="lead">Hello</p>
+     </div>
+   </div>
+
+   <div class="bottomsection">
+     <div class="col-md-12 bottombox">
+       <div class="row graphiccontainer" id="one">
+         <div class="col-sm-6 textblock">
+           <div class="col-xs-12 graphictitle">
+             <h2>Uninsured Children in Maryland vs. U.S.</h2>
+           </div>
+           <div class="col-sm-12 graphictext">
+             <p></p>
+             <p></p>
+           </div>
+         </div>
+         <div class="col-sm-7 graphicblock">
+           <div class="col-sm-12 graphiccontent">
+             <div id="uninsuredchart"></div>
+           </div>
          </div>
        </div>
-     </div>
-   </div><! /.container -->
-
-    <div class="container zachbody"> <!--beginning of main body section of document -->
-      <div class="row top">
-        <div class="col-md-12 name">Zachary S. Shapiro</div>
-      </div>
-
-      <div class="row bottomsection">
-        <div class="col-md-9 leftsection">
-          <div class="col-xs-12 introduction">
-        <div class="col-md-10 "
 
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!--All of these links below make interactivity, which we'll add later, work. This-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <!--This is the core boostrap javascript file this is the original, but we need to correct the path-->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <!--All of these links below make interactivity, which we'll add later, work. This-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+      <!--This is the core boostrap javascript file this is the original, but we need to correct the path-->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="Highcharts-5.0.13/code/highcharts.js"></script>
+      <script>
+      Highcharts.chart('uninsuredchart', {
+      data: {
+          table: 'datatable'
+      },
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Uninsured Children Before and After ACA: Maryland and U.S.'
+      },
+      xAxis: {
+          categories: ['2009', '2010', '2014', '2015', 'Difference Between 2009-2015']
+      },
+      yAxis: {
+          allowDecimals: false,
+          title: {
+              text: 'Percent of Children Uninsured'
+          }
+      },
+      tooltip: {
+          formatter: function () {
+              return '<b>' + this.series.name + '</b><br/>' +
+                  this.point.y + ' ' + this.point.name.toLowerCase();
+              }
+      },
+
+      plotOptions: {
+        column: {
+      }
+    },
+
+    series: [{
+        name: 'U.S.',
+        data: [8, 8, 6, 5, 3],
+    }, {
+        name: 'Maryland',
+        data: [5, 5, 3, 4, 1],
+     },
+    }]
+
+
+    });
+ </script>
+
+
   </body>
 </html>
