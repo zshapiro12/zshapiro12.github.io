@@ -3,6 +3,7 @@
 
 body {
   padding-top: 50px;
+  padding-left: 50px;
 
 }
 
@@ -38,6 +39,17 @@ body {
   font-weight: 600;
 }
 
+.bottomsection {
+
+}
+
+.bottombox {
+
+}
+
+h2 {
+  text-align: center
+}
 .graphiccontainer {
   margin: 0 20px 0 0;
   padding: 20px 20px;
