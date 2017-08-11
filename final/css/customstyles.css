@@ -74,6 +74,7 @@ h2 {
 .graphictitle{
   color: 	#000000;
   font-size: 12px;
+  margin-top: 15px;
 }
 
 .graphictext {
@@ -138,5 +139,14 @@ h2 {
 }
 
 #disorderchart {
-  
+
+}
+
+.graphictitle h3 {
+  font-size: 30px;
+}
+
+.graphictitle h5 {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
