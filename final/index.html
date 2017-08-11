@@ -41,9 +41,9 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="https://zshapiro12.github.io/new-resume/index.html">Resume</a></li>
+          <li><a href="../new-resume/index.html">Resume</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#finalstoryproject">Final Project Story</a></li>
+          <li class="active"> <a href="#">Final Project Story</a></li>
           <li><a href="germanyworldcup">Germany World Cup Page</a></li>
           <li><a href="ourfavoritemovies">Our Favorite Movies Page<a></li>
         </ul>
@@ -63,9 +63,9 @@
    <div class="bottomsection">
      <div class="col-md-12 bottombox">
        <div class="row graphiccontainer" id="one">
-         <div class="col-sm-6 textblock">
+         <div class="col-sm-4 col-sm-offset 1 textblock">
            <div class="col-xs-12 graphictitle">
-             <h2>Uninsured Children in Maryland vs. U.S.</h2>
+             <h2>Maryland Ahead of the Curve in Insuring Children</h2>
            </div>
            <div class="col-sm-12 graphictext">
              <p>Before the Affordable Care Act became law, 8 percent of children in U.S. were uninsured. For Maryland the number was 5 percent. Since 2014, when the Essential Health Benefits "benchmark" plan was implemented, the rate of uninsured children dropped to 5 percent in the U.S. and 4 percent in Maryland.</p>
@@ -80,9 +80,9 @@
       </div>
 
       <div class="row graphiccontainer" id="two">
-        <div class="col-sm-6 textblock">
+        <div class="col-sm-4 col-sm-offset 1 textblock">
           <div class="col-xs-12 graphictitle">
-            <h3>Licenced Psychiatrists Per 100,000 Children</h3>
+            <h3>Not Enough Psychiatrists</h3>
           </div>
           <div class="col-sm-12 graphictext">
             <p>The ACA's progress of insuring more children has also highlighted the disparity between those in need of care and avialable specialists. The crisis is nothing new but it hasn't improved much since the ACA was signed.</p>
@@ -103,7 +103,7 @@
           </div>
 
           <div class="row graphiccontatiner" id="three">
-            <div class="col-sm-6 textblock">
+            <div class="col-sm-4 col-sm-offset 1 textblock">
               <div class="col-xs-12 graphictitle">
                 <h5>At least 1 in 8 Children are Diagnosed with a Mental Health Disorder in Any Given Year. At Most, 1 in 5.</h5>
               </div>
@@ -111,13 +111,53 @@
                 <p>Roughly 13-20 percent of children in the U.S. expereience a mental disorder in any given year. The numbers below are based on a study by many mental health service clinics, among them the Centers for Disease Control and Prevention. It was conducted from 2005-2011, and results were taken from children ages 3-17.</p>
               </div>
             </div>
-            <div class="col-sm-7 graphicblock">
+
+            <div class="col-sm-6 graphicblock">
               <div class="col-sm-12 graphiccontent">
                 <div id="disorderchart"></div>
               </div>
             </div>
           </div>
 
+          <div class="row graphiccontatiner" id="four">
+            <div class="col-sm-4 col-sm-offset 1 textblock">
+              <div class="col-xs-12 graphictitle">
+                <h5></h5>
+              </div>
+              <div class="col-sm-12 graphictext">
+                <p></p>
+              </div>
+            </div>
+
+            <div class="col-sm-6 graphicblock">
+              <div class="col-sm-12 graphiccontent">
+                <div id="treatedchart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 graphicblock">
+            <div class="col-sm-12 graphiccontent">
+              <div id="disorderchart"></div>
+            </div>
+          </div>
+          </div>
+
+          <div class="row graphiccontatiner" id="five">
+            <div class="col-sm-4 col-sm-offset 1 textblock">
+              <div class="col-xs-12 graphictitle">
+                <h5></h5>
+              </div>
+              <div class="col-sm-12 graphictext">
+                <p></p>
+              </div>
+            </div>
+
+            <div class="col-sm-6 graphicblock">
+              <div class="col-sm-12 graphiccontent">
+                <div id="costchart"></div>
+              </div>
+            </div>
+          </div>
 
 
 
@@ -280,6 +320,140 @@
 
           });
         </script>
+        <script>
+        Highcharts.chart('treatedchart', {
+            chart: {
+                type: 'column'
+            },
+            credits: {
+                enabled: false,
+            },
+            colors: ['#8d4654', '#8d4654', '#8d4654', '#8d4654', '#8d4654'],
+
+            title: {
+                text: 'Children Treated for a Mental Disorder'
+            },
+            subtitle: {
+                text: 'Click the columns to view versions. Source: <a href="https://www.nimh.nih.gov/health/statistics/prevalence/use-of-mental-health-services-and-treatment-among-children.shtml">Center For Disease Control and Prevention</a>.'
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Children Treated'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f}%'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+            },
+
+            series: [{
+                name: 'Any Disorder',
+                colorByPoint: true,
+                data: [{
+                    name: 'Any Disorder',
+                    y: 50.7,
+                    drilldown: 'Any Disorder'
+                }, {
+                    name: 'ADHD',
+                    y: 47.7,
+                    drilldown: 'ADHD'
+                }, {
+                    name: 'Behavioral Conduct',
+                    y: 46.40,
+                    drilldown: 'Behavioral Conduct'
+                }, {
+                    name: 'Mood Disorders',
+                    y: 43.8,
+                    drilldown: 'Mood Disorders'
+                }, {
+                    name: 'Anxiety',
+                    y: 32.2,
+                    drilldown: 'Anxiety'
+
+                }]
+            }],
+
+          });
+          </script>
+        <script>
+        Highcharts.chart('costchart', {
+        data: {
+            table: 'datatable'
+        },
+
+        credits: {
+            enabled: false,
+        },
+
+        chart: {
+            type: 'column'
+        },
+        colors: ['#8d4654', '#8d4654', '#8d4654', '#8d4654', '#8d4654'],
+
+        title: {
+            text: 'Data extracted from a HTML table in the page'
+        },
+
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            allowDecimals: false,
+            title: {
+                text: 'Cost In Billions'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    this.point.y + ' ' + this.point.name.toLowerCase();
+            }
+        },
+        series: [{
+            name: 'Mental Disorders',
+            colorByPoint: true,
+            data: [{
+                name: 'Mental Disorders',
+                y: 13.9,
+                drilldown: 'Mental Disorders'
+            }, {
+                name: 'Asthma',
+                y: 8.3,
+                drilldown: 'Asthma'
+            }, {
+                name: 'Trauma-Related Disorders',
+                y: 7.8,
+                drilldown: 'Trauma-Related Disorders'
+            }, {
+                name: 'Bronchitis',
+                y: 3.2,
+                drilldown: 'Bronchitis'
+            }, {
+                name: 'Infectious Disease',
+                y: 2.5,
+                drilldown: 'Infectious Disease'
+
+            }]
+          }]
+        });
+      </script>
 
 
   </body>
