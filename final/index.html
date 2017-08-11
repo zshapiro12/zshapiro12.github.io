@@ -86,10 +86,11 @@
           </div>
           <div class="col-sm-12 graphictext">
             <p>The ACA's progress of insuring more children has also highlighted the disparity between those in need of care and avialable specialists. The crisis is nothing new but it hasn't improved much since the ACA was signed.</p>
-            <p>The map below, which looks at first like an image Donald Trump would hang in every room and pass out to guests, is actually a chart showing the number of licenced psychiatrists per 100,000 children in 2012, state by state. The data was collected by Milbrank Memorial Fund.</p>
+            <p>The map below, which looks at first glance like an image Donald Trump would hang in every room and pass out to guests, is actually a chart showing the number of licenced psychiatrists per 100,000 children in 2012, state by state. The data was collected by Milbrank Memorial Fund.</p>
             <p>If you zoom in close to Maryland, you'll see D.C. is the only place on the map in the green, which means more than 47 licensed psychiatrists per 100,000 children.</p>
           </div>
         </div>
+
         <div class="col-sm-6 graphicblock">
           <div class="col-sm-12 graphiccontent"><iframe class="map" width="100%" height="500" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col3%3E%3E0+from+1e3guVm51XnnK4uGdoVrWaFtM4vsqDrz5WY3N1XNT&amp;viz=MAP&amp;h=false&amp;lat=39.6568977136368&amp;lng=-76.29483906250005&amp;t=1&amp;z=4&amp;l=col3%3E%3E0&amp;y=2&amp;tmplt=2&amp;hml=KML" width="100%" height="480"></iframe>
             <div class="legendbox">
@@ -97,6 +98,25 @@
                 <div class="legendentry severeshortage">1-17</div>
                 <div class="legendentry highshortage">18-46</div>
                 <div class="legendentry intheclear">47 and above</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row graphiccontatiner" id="three">
+            <div class="col-sm-3 col-sm-offset-1 textblock">
+              <div class="col-sm-12 graphictitle">
+                <h5></h5>
+              </div>
+              <div class="col-sm-12 graphictext">
+                <p></p>
+              </div>
+            </div>
+            <div class="col-sm-7 graphicblock">
+              <div class="col-sm-12 graphiccontent">
+                <div id="disorderchart"></div>
+              </div>
+            </div>
+          </div>
 
 
 
@@ -171,11 +191,265 @@
           style: {
               fontSize: '8px',
               fontFamily: 'Verdana, sans-serif'
-          }
-      }
-  }]
- });
-</script>
+              }
+            }
+          }]
+        });
+        </script>
+        <script>
+        Highcharts.chart('disorderchart', {
+            chart: {
+                type: 'column'
+            },
+            credits: {
+                enabled: false,
+            },
+
+            title: {
+                text: 'Children Diagnosed with a Mental Disorder, 2005-2011'
+            },
+            subtitle: {
+                text: 'Click the columns to view versions. Source: <a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/su6202a1.htm">Center For Disease Control and Prevention</a>.'
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: 'Children Diagnosed'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f}%'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+            },
+
+            series: [{
+                name: 'Any Disorder',
+                colorByPoint: true,
+                data: [{
+                    name: 'Any Disorder',
+                    y: 13.5,
+                    drilldown: 'Any Disorder'
+                }, {
+                    name: 'ADHD',
+                    y: 6.8,
+                    drilldown: 'ADHD'
+                }, {
+                    name: 'Behavioral Conduct',
+                    y: 3.5,
+                    drilldown: 'Behavioral Conduct'
+                }, {
+                    name: 'Anxiety',
+                    y: 3.1,
+                    drilldown: 'Anxiety'
+                }, {
+                    name: 'Major Depression',
+                    y: 2.1,
+                    drilldown: 'Major Depression'
+
+                }]
+            }],
+            drilldown: {
+                series: [{
+                    name: 'Microsoft Internet Explorer',
+                    id: 'Microsoft Internet Explorer',
+                    data: [
+                        [
+                            'v11.0',
+                            24.13
+                        ],
+                        [
+                            'v8.0',
+                            17.2
+                        ],
+                        [
+                            'v9.0',
+                            8.11
+                        ],
+                        [
+                            'v10.0',
+                            5.33
+                        ],
+                        [
+                            'v6.0',
+                            1.06
+                        ],
+                        [
+                            'v7.0',
+                            0.5
+                        ]
+                    ]
+                }, {
+                    name: 'Chrome',
+                    id: 'Chrome',
+                    data: [
+                        [
+                            'v40.0',
+                            5
+                        ],
+                        [
+                            'v41.0',
+                            4.32
+                        ],
+                        [
+                            'v42.0',
+                            3.68
+                        ],
+                        [
+                            'v39.0',
+                            2.96
+                        ],
+                        [
+                            'v36.0',
+                            2.53
+                        ],
+                        [
+                            'v43.0',
+                            1.45
+                        ],
+                        [
+                            'v31.0',
+                            1.24
+                        ],
+                        [
+                            'v35.0',
+                            0.85
+                        ],
+                        [
+                            'v38.0',
+                            0.6
+                        ],
+                        [
+                            'v32.0',
+                            0.55
+                        ],
+                        [
+                            'v37.0',
+                            0.38
+                        ],
+                        [
+                            'v33.0',
+                            0.19
+                        ],
+                        [
+                            'v34.0',
+                            0.14
+                        ],
+                        [
+                            'v30.0',
+                            0.14
+                        ]
+                    ]
+                }, {
+                    name: 'Firefox',
+                    id: 'Firefox',
+                    data: [
+                        [
+                            'v35',
+                            2.76
+                        ],
+                        [
+                            'v36',
+                            2.32
+                        ],
+                        [
+                            'v37',
+                            2.31
+                        ],
+                        [
+                            'v34',
+                            1.27
+                        ],
+                        [
+                            'v38',
+                            1.02
+                        ],
+                        [
+                            'v31',
+                            0.33
+                        ],
+                        [
+                            'v33',
+                            0.22
+                        ],
+                        [
+                            'v32',
+                            0.15
+                        ]
+                    ]
+                }, {
+                    name: 'Safari',
+                    id: 'Safari',
+                    data: [
+                        [
+                            'v8.0',
+                            2.56
+                        ],
+                        [
+                            'v7.1',
+                            0.77
+                        ],
+                        [
+                            'v5.1',
+                            0.42
+                        ],
+                        [
+                            'v5.0',
+                            0.3
+                        ],
+                        [
+                            'v6.1',
+                            0.29
+                        ],
+                        [
+                            'v7.0',
+                            0.26
+                        ],
+                        [
+                            'v6.2',
+                            0.17
+                        ]
+                    ]
+                }, {
+                    name: 'Opera',
+                    id: 'Opera',
+                    data: [
+                        [
+                            'v12.x',
+                            0.34
+                        ],
+                        [
+                            'v28',
+                            0.24
+                        ],
+                        [
+                            'v27',
+                            0.17
+                        ],
+                        [
+                            'v29',
+                            0.16
+                        ]
+                    ]
+                }]
+            }
+        });
+        </script>
 
 
   </body>
