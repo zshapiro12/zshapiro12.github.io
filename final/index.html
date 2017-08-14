@@ -152,42 +152,25 @@
               </div>
             </div>
 
+
             <div class="col-sm-6 graphicblock">
             <div class="col-sm-12 graphiccontent">
-              <div id="costchart"></div>
-            </div>
+              <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+      <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+      <div class="ct-chart" id="chart1"></div>
+
+      <script>
+      new Chartist.Bar('.ct-chart', {
+    labels: ['Mental Disorders', 'Asthma', 'Trauma-Related Disorders', 'Bronchitis', 'Infectious Disease'],
+    series: [13.9, 8.1, 7.8, 3.2, 2.5]
+  }, {
+    distributeSeries: true
+  });
+    </script>
+          </div>
           </div>
         </div>
 
-        <div class="row graphiccontainer" id="six">
-          <div class="col-sm-4 col-sm-offset 1 textblock">
-            <div class="col-xs-12 graphictitle">
-              <div></div>
-            </div>
-            <div class="col-sm-12 graphictext">
-              <p></p>
-            </div>
-          </div>
-
-          <div class="col-sm-6 graphicblock">
-          <div class="col-sm-12 graphiccontent">
-            <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-    <div class="ct-chart" id="chart1"></div>
-
-    <script>
-    new Chartist.Bar('.ct-chart', {
-  labels: ['Mental Disorders', 'Asthma', 'Trauma-Related Disorders', 'Bronchitis', 'Infectious Disease'],
-  series: [13.9, 8.1, 7.8, 3.2, 2.5]
-}, {
-  distributeSeries: true
-});
-  </script>
-        </div>
-        </div>
-      </div>
-
-      <div
 
 
 

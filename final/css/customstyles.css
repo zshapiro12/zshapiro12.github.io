@@ -153,6 +153,8 @@ h2 {
 
 }
 
-#chart1 {
-  
+.ct-chart {
+  width: 700px;
+  height: 400px;
+  text: 40px;
 }
