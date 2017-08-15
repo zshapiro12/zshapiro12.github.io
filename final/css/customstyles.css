@@ -14,8 +14,12 @@ body {
 
 }
 
+h2 {
+  font-size: 40px;
+}
+
 .byline {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   font-weight: 400;
   color: #777;
@@ -156,5 +160,5 @@ h2 {
 .ct-chart {
   width: 700px;
   height: 400px;
-  text: 40px;
+  label: 40px;
 }
