@@ -57,8 +57,8 @@ body{
 .aboutheader {
   margin: 15px 0 5px 50px;
   font-size: 2em;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: 400;
+
 }
 
 /* Added headline in css for portfolio page*/
@@ -72,8 +72,9 @@ body{
   margin: 15px 0 15px 0;
 }
 
-.abouttext {
-  margin-left: 35px;
+.abouttext, .aboutheader {
+  padding: 10px 100px;
+  text-align:justify;
 }
 
 .selectedworks {
@@ -193,8 +194,15 @@ li.medialinks{
 
 }
 
-.medialinks1 ul li{
+.medialinks1 li{
   display: inline-block;
+  font-size: .3em;
+  margin: 0px 0 15px 0;
+  padding-top: 1px;
+}
+
+.medialinks1 ul{
+  margin: 100px;
 }
 
 ul.technicalskills {
@@ -220,3 +228,8 @@ ul.technicalskills{
     overflow-x: hidden;
     float: left;
   }
+
+@media only screen (min-width: 768px) and (max-width: 768px) {
+    .abouttext, .aboutheader {
+      padding: 10px 10px;
+      text-align:justify; {
