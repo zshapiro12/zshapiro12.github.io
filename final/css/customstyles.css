@@ -160,5 +160,13 @@ h2 {
 .ct-chart {
   width: 700px;
   height: 400px;
-  label: 40px;
 }
+
+.ct-label {
+  font-size: 12px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .bottomsection {
+      padding: 0;
+      text-align: {

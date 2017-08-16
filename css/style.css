@@ -55,7 +55,7 @@ body{
 }
 
 .aboutheader {
-  margin: 15px 0 5px 50px;
+  /*margin: 15px 0 5px 50px;*/
   font-size: 2em;
   font-weight: 400;
 
@@ -72,11 +72,16 @@ body{
   margin: 15px 0 15px 0;
 }
 
+/* Tried to align "Hi, I'm Zach" a frowned upon way
 .abouttext, .aboutheader {
   padding: 10px 100px;
   text-align:justify;
 }
 
+.aboutheader {
+  padding: 10px 64px;
+}
+*/
 .work {
   margin: 10px 0 10px 0;
   font-weight: ;
@@ -163,27 +168,36 @@ ul.keyskills{
 
 }
 
+/*
 ul.medialinks {
-  line-height: 1.em;
+  line-height: 1em;
   list-style-type: none;
+  display: block;
+  margin: 0 auto;
 }
-
+*/
+/*
 li.medialinks{
  margin-top: 5px;
 
 }
-
-.medialinks1 li{
+*/
+/* Added media links code in CSS to center*/
+ul.medialinks1 li{
   display: inline-block;
-  font-size: .3em;
+  font-size: 1em;
   margin: 0px 0 15px 0;
   padding-top: 1px;
+  text-align: center;
 }
 
-.medialinks1 ul{
-  margin: 100px;
-}
 
+ul.medialinks1{
+  text-align: center;
+  margin-top: 10px;
+
+}
+*/
 ul.technicalskills {
  line-height: 1.5em;
  list-style-type: none;
@@ -193,6 +207,7 @@ ul.technicalskills {
 .address, .phone, .email {
   font-size: bold;
 }
+
 /* Media query for extra small device*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .rightsection {
@@ -206,5 +221,5 @@ ul.technicalskills {
 
 @media only screen (min-width: 768px) and (max-width: 768px) {
     .abouttext, .aboutheader {
-      padding: 10px 10px;
-      text-align:justify; {
+      padding: 0;
+      text-align: {
