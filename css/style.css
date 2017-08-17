@@ -58,9 +58,11 @@ body{
   /*margin: 15px 0 5px 50px;*/
   font-size: 2em;
   font-weight: 400;
-
 }
 
+.abouttext {
+  margin-top: 20px;
+}
 /* Added headline in css for portfolio page*/
 .headline {
   font-weight: ;
@@ -175,17 +177,15 @@ ul.medialinks {
   display: block;
   margin: 0 auto;
 }
-*/
 
-ul.socialmedia{
-  display: inline-block;
-  font-weight: bold;
-}
-
-.text-container {
+.socialmedia {
   text-align: center;
-  font-size: bold;
 }
+.socialmedia li {
+  display: inline-block;
+  text-align: center;
+}
+
 
 /*li.medialinks{
  margin-top: 5px;
@@ -221,24 +221,51 @@ ul.medialinks1{
 }
 
 /* Media query for extra small device*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (max-width: 768px) {
   .rightsection {
     background color: none;
-    float: right;}
+    text-align: left
+    }
 
   .date {
     overflow-x: hidden;
     float: left;
-  }
+    font-size: .9em;
+    }
+}
 
 @media only screen (min-width: 768px) and (max-width: 768px) {
     .abouttext, .aboutheader {
       padding: 0;
-      text-align: {
+    }
 }
 
-@media only screen (min-width: 768px) and (max-width: 1199px) {
-    .leftsection {
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .bottomsection {
       padding: none;
+      float: right;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .name {
+      margin: none;
+    }
+    .date {
+      margin-top: 8px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .rightsection {
+      background-color: #F5F5F5;
+    }
+}
+
+@media only screen and (max-width: 524px) {
+    .name {
+      line-height: 64px;
     }
 }
