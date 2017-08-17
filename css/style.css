@@ -137,9 +137,6 @@ body{
   font-weight: 300;
 }
 
-.technicalskillsbox {
-
-}
 /* Bolded address, phone and email and adjusted margins*/
 .address {
   margin-bottom: 1px;
@@ -167,22 +164,35 @@ ul.keyskills{
   list-style-type: none;
 
 }
+ul.technicalskills {
+ line-height: 1.5em;
+ list-style-type: none;
+}
 
-/*
 ul.medialinks {
-  line-height: 1em;
+  line-height: 1.5em;
   list-style-type: none;
   display: block;
   margin: 0 auto;
 }
 */
-/*
-li.medialinks{
+
+ul.socialmedia{
+  display: inline-block;
+  font-weight: bold;
+}
+
+.text-container {
+  text-align: center;
+  font-size: bold;
+}
+
+/*li.medialinks{
  margin-top: 5px;
 
 }
 */
-/* Added media links code in CSS to center*/
+/* Added media links code in CSS to center
 ul.medialinks1 li{
   display: inline-block;
   font-size: 1em;
@@ -195,12 +205,14 @@ ul.medialinks1 li{
 ul.medialinks1{
   text-align: center;
   margin-top: 10px;
-
+  display: inline-block;
+*/
 }
 */
-ul.technicalskills {
+.technicalskills {
  line-height: 1.5em;
  list-style-type: none;
+ font-size: 400px
 
 }
 
@@ -223,3 +235,10 @@ ul.technicalskills {
     .abouttext, .aboutheader {
       padding: 0;
       text-align: {
+}
+
+@media only screen (min-width: 768px) and (max-width: 1199px) {
+    .leftsection {
+      padding: none;
+    }
+}
