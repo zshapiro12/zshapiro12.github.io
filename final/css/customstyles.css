@@ -27,6 +27,7 @@ h2 {
   margin: 15px 0 20px 0;
   font-style: italic;
   text-align: center;
+
 }
 
 .lead p {
@@ -80,11 +81,12 @@ h2 {
 
 .graphictext {
   padding-left: 0px;
+  font-size: .9em;
 }
 
-#one, #three, #five, #seven, #eight {
+#one, #three, #five, #seven, #eight, #nine {
   font-size: 15px;
-  margin: 20px 0 20px 0;
+  margin: 20px 70px 20px 0;
   font:
 
 }
@@ -95,7 +97,7 @@ h2 {
 }
 
 #uninsuredchart {
-
+  height: 420px;
 }
 
 #two {
@@ -139,22 +141,6 @@ h2 {
   background-color: #00ff00;
 }
 
-#three {
-
-}
-
-#disorderchart {
-
-}
-
-#treatedchart {
-
-}
-
-#costchart {
-
-}
-
 #seven {
   margin-top: 40px;
 }
@@ -182,3 +168,5 @@ h2 {
       padding: 0;
     }
   }
+
+@media only screen and (max-)
