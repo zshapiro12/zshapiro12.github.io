@@ -17,6 +17,7 @@ body {
 
 h2 {
   font-size: 40px;
+  text-align: left;
 }
 
 .byline {
@@ -49,13 +50,6 @@ h2 {
   text-align: left;
 }
 
-.bottombox {
-
-}
-
-h2 {
-  text-align: left;
-}
 .graphiccontainer {
   margin: 0 0px 0 0;
   padding: 20px 20px;
@@ -163,10 +157,14 @@ h2 {
   font-size: 12px !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
     .topsection {
       padding: 0;
     }
+    .textblock {
+      border: none;
+    }
   }
+
 
 @media only screen and (max-)
